@@ -1,0 +1,4 @@
+.footer-container {
+    background: #D9DAD6;
+    @apply pl-[4.5rem] pr-[10.63rem] pt-[7.73rem]
+}

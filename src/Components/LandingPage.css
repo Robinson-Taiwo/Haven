@@ -1,78 +1,96 @@
 .navbar-container {
-    @apply w-[100vw] px-[4.44rem] pt-[2rem] py-[1.04rem] justify-between flex flex-row
+  @apply w-[100vw] px-[4.44rem] pt-[2rem] py-[1.04rem] justify-between flex flex-row;
 }
 
 .navbar-links {
-    @apply flex flex-row gap-[5rem] text-[#000] font-semibold leading-normal items-center justify-center
+  @apply flex flex-row gap-[5rem] text-[#000] font-semibold leading-normal items-center justify-center;
 }
 
 .navbar-link.active {
-    border-bottom: 0.125rem solid black;
+  border-bottom: 0.125rem solid black;
 }
 
 .navbar-icons {
-    @apply flex flex-row gap-[1.5rem] items-center justify-center
+  @apply flex flex-row gap-[1.5rem] items-center justify-center;
 }
 
 .hero-section {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(../assets/images/hero-background.png) lightgray 50%;
-    @apply bg-no-repeat bg-cover bg-center w-[100bw] h-[33.125rem] pt-[10.38rem] pl-[4.5rem]
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url(../assets/images/hero-background.png) lightgray 50%;
+  @apply bg-no-repeat bg-cover bg-center w-[100bw] h-[33.125rem] pt-[10.38rem] pl-[4.5rem];
 }
 
 .hero-texts {
-    @apply flex flex-col text-[#ffffff]
+  @apply flex flex-col text-[#ffffff];
 }
 
 .hero-texts h1 {
-    @apply mb-[1rem] text-[4rem] font-bold
+  @apply mb-[1rem] text-[4rem] font-bold;
 }
 
 .subheading {
-    @apply w-[26.25rem] text-[1.5rem] font-semibold
+  @apply w-[26.25rem] text-[1.5rem] font-semibold;
 }
 
-
 .mimi-text {
-    @apply w-[26.25rem] text-[1rem] font-medium mb-[1.5rem]
+  @apply w-[26.25rem] text-[1rem] font-medium mb-[1.5rem];
 }
 
 .shopNow {
-    border-radius: 0.625rem;
-    border: 1.5px solid #FFF;
-    display: flex;
-    padding: 0.75rem 1.5rem;
-    justify-content: center;
-    align-items: center;
-    background: #FFF;
-    @apply text-[black] w-[7.44rem]
+  border-radius: 0.625rem;
+  border: 1.5px solid #fff;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  @apply text-[black] w-[7.44rem];
 }
 
 .products-lists {
-    @apply px-[4.5rem] pt-[3.38rem]
+  @apply px-[4.5rem] pt-[3.38rem];
 }
 
 .flashSales-container {
-    @apply flex flex-row h-[3rem] justify-between mb-[3.81rem]
+  @apply flex flex-row h-[3rem] justify-between mb-[3.81rem];
 }
 
 .flash-sales-texts {
-    @apply flex flex-row gap-[0.5rem] font-semibold text-[1rem]
+  @apply flex flex-row gap-[0.5rem] font-semibold text-[1rem];
 }
 
 .dropdown {
-    display: flex;
-    padding: 0.875rem;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0.625rem;
-    border: 0.5px solid rgba(0, 0, 0, 0.50);
-    background: rgba(225, 230, 234, 0.08);
+  display: flex;
+  padding: 0.875rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.625rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  background: rgba(225, 230, 234, 0.08);
 }
 
 .product-section {
-    @apply w-[100%]
+  @apply w-[100%];
 }
 
 .product-section-container {
-    @apply grid grid-cols-3 gap-y-[13rem] place-content-center place-items-center
+  @apply grid grid-cols-3 gap-y-[13rem] place-content-center place-items-center;
+}
+
+.load-more {
+  @apply mt-[7rem] w-[100%] flex items-center justify-center;
+}
+
+.load-more button {
+  display: inline-flex;
+  padding: 0.75rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  @apply mb-[11.44rem];
 }

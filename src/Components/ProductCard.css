@@ -11,5 +11,35 @@
 } */
 
 .ProductCard-container {
-    @apply w-[25.69rem]
+    @apply w-[25.69rem] relative
+}
+
+.product-card-rate {
+    @apply relative flex flex-row justify-between mb-[1.5rem]
+}
+
+.quantity {
+    @apply flex flex-row gap-[0.88rem]
+}
+
+.product-card-rate h6 {
+    @apply text-[0.875rem]
+}
+
+.product-card-rate h3 {
+    @apply text-[1rem] font-medium
+}
+
+.old-price {
+    text-decoration-line: strikethrough;
+    @apply text-[0.875rem] font-light 
+}
+
+.add-to-cart {
+    border-radius: 0.625rem;
+    display: flex;
+    padding: 0.75rem 5rem;
+    justify-content: center;
+    align-items: center;
+    @apply bg-[#434834] w-[100%] mt-[6rem] text-[white] flex-row gap-[0.62rem]
 }
