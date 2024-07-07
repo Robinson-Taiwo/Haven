@@ -1,0 +1,15 @@
+.heart-image {
+    @apply absolute bottom-[1.75rem] right-[1.75rem]
+}
+
+.productCard-image {
+    @apply h-fit mb-[2.25rem]
+}
+
+/* .product-section-container{
+    @apply 
+} */
+
+.ProductCard-container {
+    @apply w-[25.69rem]
+}

@@ -4,6 +4,7 @@ import LandingPage from './LandingPage'
 import "./LandingPage.css"
 import Cart from './Cart'
 import Signup from './Signup'
+import Checkout from './Checkout'
 
 const AppRoutes = () => {
     return (
@@ -12,6 +13,8 @@ const AppRoutes = () => {
             <Route path='/' element={<LandingPage />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/user' element={<Signup />} />
+            <Route path='/checkout' element={<Checkout />} />
+
 
 
 
