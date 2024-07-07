@@ -10,7 +10,7 @@ const ProductCard = ({ image, size, originalPrice, oldPrice }) => {
     return (
         <div className="ProductCard-container">
             <div className="productCard-image relative">
-                <img className="pc-image" src={`src/assets/images/${image}.png`} alt="" />
+                <img className="pc-image" src={`./images/${image}.png`} alt="" />
                 <img className="heart-image" src={heart} alt="" />
             </div>
             <div className="product-card-rate">
