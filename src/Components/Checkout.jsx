@@ -150,7 +150,7 @@ const Checkout = () => {
 
                             <div className="card-deets-container">
 
-                                <div className="deets-form">
+                                <div className="deets-form  ">
                                     <h4>Expiry Date</h4>
 
                                     <input maxLength={9} type="text" />
@@ -167,7 +167,7 @@ const Checkout = () => {
                                         <input type="password" maxLength={3} className='cvc' />
                                     </div>
 
-                                    <div className="deets-line"></div>
+                                    <div className="deets-line "></div>
 
                                 </div>
 

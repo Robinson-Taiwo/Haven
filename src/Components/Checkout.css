@@ -9,7 +9,7 @@
 
 .checkout-container {
     border: 1px solid rgba(8, 72, 125, 0.15);
-    @apply bg-[rgb(255,255,255)] h-[51rem] w-[77.5rem] pl-[1.87rem] flex flex-row gap-[5.62rem] 
+    @apply bg-[rgb(255,255,255)] h-[51rem] w-[77.5rem] pl-[1.87rem] flex flex-row desktop:gap-[5.62rem]  laptop:gap-[3rem]
 }
 
 .payment-container {
@@ -26,12 +26,12 @@
 }
 
 .payment-details-texts h4 {
-    @apply text-[2rem] w-fit
+    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit
 }
 
 
 .payment-detail-item h4 {
-    @apply text-[2rem] font-semibold w-fit
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem] font-semibold w-fit
 }
 
 
@@ -50,7 +50,7 @@
 }
 
 .item-containerr p{
-    @apply text-[2rem]
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]
 }
 
 .checkbox{
@@ -180,7 +180,7 @@ input:focus {
 }
 
 .card-deets-container {
-    @apply px-[1rem] py-[0.5rem] flex flex-row gap-[8rem]
+    @apply px-[1rem] py-[0.5rem] flex flex-row desktop:gap-[8rem]  laptop:gap-[5rem]
 }
 
 .deets-line {
@@ -189,11 +189,11 @@ input:focus {
 }
 
 .deets-form {
-    @apply flex flex-col
+    @apply flex flex-col laptop:max-w-[9rem]
 }
 
 .deets-form h4 {
-    @apply mb-[2rem] text-[1.25rem] font-normal
+    @apply mb-[2rem] text-[1.25rem] font-normal w-[9rem]
 }
 
 .deets-form input {
