@@ -66,11 +66,10 @@
     border-radius: 0.625rem;
     border: 1.5px solid #fff;
     display: flex;
-    padding: 0.75rem 1.5rem;
     justify-content: center;
     align-items: center;
     background: #fff;
-    @apply text-[black] laptop:w-[7.44rem] laptop:text-[1rem] text-[0.875rem] w-[6.875rem];
+    @apply text-[black] laptop:w-[7.44rem] laptop:text-[1rem] text-[0.875rem] w-[6.875rem] h-[2.75rem] laptop:h-fit laptop:px-[1.5rem] laptop:py-[0.75rem];
 }
 
 .products-lists {
@@ -82,7 +81,11 @@
 }
 
 .flash-sales-texts {
-    @apply flex flex-row gap-[0.5rem] font-semibold mb-[1rem] laptop:mb-[0rem] laptop:text-[1rem] text-[0.875rem];
+    @apply flex flex-row gap-[0.5rem] font-semibold mb-[1rem] laptop:mb-[0rem] laptop:text-[1rem] text-[0.875rem] overflow-y-hidden;
+}
+
+.flash-sales-texts span{
+    @apply overflow-y-hidden ; 
 }
 
 .dropdown {
@@ -93,7 +96,7 @@
     border-radius: 0.625rem;
     border: 0.5px solid rgba(0, 0, 0, 0.5);
     background: rgba(225, 230, 234, 0.08);
-    @apply laptop:w-[15.5rem] w-[11.81rem];
+    @apply laptop:w-[15.5rem] w-[11.81rem] overflow-y-hidden;
 }
 
 .product-section {
