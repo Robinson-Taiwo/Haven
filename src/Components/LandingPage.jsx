@@ -5,6 +5,8 @@ import user from "../assets/icons/user.svg";
 import cart from "../assets/icons/cart.svg";
 import logo from "../assets/icons/logo.svg";
 import arrowd from "../assets/icons/arrow-down.svg";
+import menu from "../assets/icons/menu.svg";
+
 import data from "./data";
 
 import "./LandingPage.css";
@@ -53,6 +55,9 @@ const LandingPage = () => {
                         </h5>
                     ))}
                 </div>
+
+                <img src={menu} alt="" className="hambugar" />
+
 
                 <div className="logo">
                     <img src={logo} className="navbar-logo" alt="logo" />

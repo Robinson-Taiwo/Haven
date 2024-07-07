@@ -11,11 +11,11 @@
 } */
 
 .ProductCard-container {
-    @apply w-[25.69rem] relative
+    @apply laptop:w-[25.69rem] relative w-[20rem]
 }
 
 .product-card-rate {
-    @apply relative flex flex-row justify-between mb-[1.5rem]
+    @apply relative flex flex-row justify-between laptop:mb-[1.5rem] mb-[1.25rem]
 }
 
 .quantity {
@@ -32,7 +32,7 @@
 
 .old-price {
     text-decoration-line: strikethrough;
-    @apply text-[0.875rem] font-light 
+    @apply text-[0.875rem] font-light
 }
 
 .add-to-cart {
@@ -41,5 +41,5 @@
     padding: 0.75rem 5rem;
     justify-content: center;
     align-items: center;
-    @apply bg-[#434834] w-[100%] mt-[6rem] text-[white] flex-row gap-[0.62rem]
+    @apply bg-[#434834] w-[100%] mt-[4.5rem] laptop:mt-[6rem] text-[white] flex-row gap-[0.62rem]
 }
