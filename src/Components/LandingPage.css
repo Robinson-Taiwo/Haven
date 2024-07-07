@@ -6,6 +6,10 @@
     @apply flex flex-row gap-[5rem] text-[#000] font-semibold leading-normal items-center justify-center
 }
 
+.navbar-link.active {
+    border-bottom: 0.125rem solid black;
+}
+
 .navbar-icons {
     @apply flex flex-row gap-[1.5rem] items-center justify-center
 }

@@ -14,6 +14,16 @@ import ProductCard from './ProductCard'
 
 const LandingPage = () => {
 
+    const [activeLink, setActiveLink] = useState('');
+
+    // Define nav items
+    const navItems = ['Type', 'Hot Deals', 'Brand'];
+
+    // Function to handle the click event
+    const handleClick = (link) => {
+        setActiveLink(link);
+    };
+
 
     const [selected, setSelected] = useState('Sort by');
     const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +48,16 @@ const LandingPage = () => {
 
                 <div className="navbar-links">
 
-                    <h5 className="navbar-link">Type</h5>
-                    <h5 className="navbar-link">Hot Deals</h5>
-                    <h5 className="navbar-link">Brand</h5>
+                    {navItems.map((item, index) => (
+                        <h5 key={index}>
+                            <button
+                                className={`navbar-link ${activeLink === item ? 'active' : ''}`}
+                                onClick={() => handleClick(item)}
+                            >
+                                {item}
+                            </button>
+                        </h5>
+                    ))}
 
                 </div>
 
