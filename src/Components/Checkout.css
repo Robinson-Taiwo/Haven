@@ -1,10 +1,9 @@
-
-.checkout-Page-section{
+.checkout-Page-section {
     @apply w-[100vw] flex justify-center flex-col items-center relative pt-[6.19rem]
 }
 
 .out-container {
-    @apply flex flex-row gap-[1.38rem] 
+    @apply flex flex-row gap-[1.38rem]
 }
 
 .delivery-container {
@@ -51,7 +50,7 @@
 }
 
 
-.one-input-form input, .one-input-form select:focus{
+.one-input-form input, .one-input-form select:focus {
     @apply outline-none
 }
 
@@ -76,10 +75,122 @@
     @apply flex flex-row justify-between
 }
 
-.order-container{
+.order-container {
     height: 56.5rem;
     border-radius: 0.3125rem;
-border: 1px solid rgba(0, 0, 0, 0.15);
-background: #FFF;
-    @apply w-[32.4375rem] bg-[white]
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #FFF;
+    @apply w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem]
+}
+
+.oc-first-container {
+    @apply flex flex-row w-[100%] justify-between mb-[2.75rem]
+}
+
+.oc-first-container p {
+    color: #000;
+    font-family: Lato;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+
+.oc-first-container h1 {
+    color: #000;
+    font-family: Lato;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.oc-line {
+    width: 100%;
+    height: 0.0625rem;
+    background: rgba(0, 0, 0, 0.10);
+}
+
+
+.reciept-card-texts {
+    @apply flex flex-col w-[14.5625rem]
+}
+
+.rc-image {
+    width: 11.5625rem;
+    height: 13.22231rem;
+}
+
+.reciept-card-texts h1 {
+    color: #000;
+    font-family: Lato;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.reciept-card-texts p {
+    color: #000;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.reciept-card {
+    @apply flex flex-row justify-between mt-[2.75rem] mb-[3.09rem]
+}
+
+.rc-calc {
+    @apply flex flex-col gap-[1.5rem] mb-[2.5rem] laptop:w-[25.5rem] mt-[2.5rem]
+}
+
+.rcc-subtotal {
+    @apply flex flex-row gap-[10rem]
+}
+
+.rcc-subtotal h1 {
+    color: #000;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @apply w-[fit]
+}
+
+.rc-button {
+    @apply mt-[6rem] w-[100%] justify-center items-center mb-[2.81rem] flex
+}
+
+.rc-button button {
+    display: flex;
+    width: 25.6875rem;
+    padding: 0.75rem 5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.625rem;
+    @apply bg-[#434834] flex flex-row gap-[0.62rem] text-white
+}
+
+
+.checkout-footer {
+    background: #D9DAD6;
+
+
+    @apply pt-[8.44rem] pb-[2.75rem] w-[100%] flex flex-row items-center justify-evenly mt-[4rem]
+}
+
+.checkout-footer p {
+    color: rgba(65, 65, 65, 0.76);
+    font-family: Lato;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }

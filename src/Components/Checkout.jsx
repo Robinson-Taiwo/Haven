@@ -1,6 +1,7 @@
 import React from 'react'
 import back from "../assets/icons/arrow-left.svg"
-
+import image1 from "../assets/images/image2.png";
+import wallet from "../assets/icons/wallet.svg"
 import "./Checkout.css"
 import { Link } from 'react-router-dom'
 
@@ -166,19 +167,112 @@ const Checkout = () => {
 
 
 
-
-
-
-
-
                         <div className="order-container">
 
+
+                            <div className='oc-first-container' >
+
+                                <h1>
+                                    My Order
+                                </h1>
+
+                                <p >Edit</p>
+
+                            </div>
+
+
+                            <div className="oc-line">  </div>
+
+
+
+
+                            <div className="reciept-card">
+
+                                <img src={image1} className='rc-image' alt="" />
+
+                                <div className='reciept-card-texts' >
+
+                                    <h1>King size Bedding and Platform          </h1>
+
+                                    <p>Quantity: 2</p>
+
+                                    <p>Price: NGN 500,000</p>
+
+                                </div>
+
+
+                            </div>
+
+                            <div className="oc-line">  </div>
+
+
+                            <div className="rc-calc">
+
+                                <div className="rcc-subtotal">
+                                    <h1>Cart Subtotal:</h1>
+
+                                    <p> NGN1,000,000.00 </p>
+
+                                </div>
+
+                                <div className="rcc-subtotal">
+                                    <h1>Delivery:</h1>
+
+                                    <p className='ml-[2.1rem]' > Free Delivery</p>
+
+                                </div>
+
+
+                            </div>
+
+                            <div className="oc-line">  </div>
+
+
+                            <div className="rc-calc">
+
+                                <div className="rcc-subtotal">
+                                    <h1>Total:</h1>
+
+                                    <p>NGN 1,000,000.00</p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div className="rc-button">
+
+                                <button>
+                                    <span><img src={wallet} alt="" /></span> <span> Pay Now</span>
+                                </button>
+                            </div>
+
+                            <div className="remember-card w-[100%] py-[0.5rem]">
+                                <label className="custom-checkbox">
+                                    <input type="checkbox" className="checkbox" />
+                                    <span className="checkmark"></span>
+                                    <span className="remember text-[0.75rem] text-[black] ">I have read and agreed to the Haven shop Terms of Use and Privacy Policy.</span>
+                                </label>
+                            </div>
 
 
                         </div>
 
+
+
+
                     </div>
                 </div>
+                    <div className="checkout-footer">
+
+                        <p>Terms and condition</p>
+                        <p>Privacy Policy</p>
+                        <p>Cookie Policy</p>
+
+
+
+                    </div>
 
 
             </div>
