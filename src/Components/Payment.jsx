@@ -76,7 +76,7 @@ const Payment = () => {
                             </div>
 
                             <div className="payment-details-texts">
-                                <h4 className='mt-[1rem]' >Amount:</h4>
+                                <h4 className=' ' >Amount:</h4>
 
                                 <h3 className='' >NGN 1,000,000</h3>
 
@@ -176,7 +176,7 @@ const Payment = () => {
 
                                     <input maxLength={9} type="text" />
 
-                                    <div className="deets-line"></div>
+                                    <div className="deets-line  w-[4.55rem] "></div>
 
                                 </div>
 
@@ -188,7 +188,7 @@ const Payment = () => {
                                         <input type="password" maxLength={3} className='cvc' />
                                     </div>
 
-                                    <div className="deets-line "></div>
+                                    <div className="deets-line w-[4.55rem]  "></div>
 
                                 </div>
 

@@ -17,7 +17,7 @@
 }
 
 .Payment-text {
-    @apply text-[2.25rem] font-semibold mb-[5.75rem]
+    @apply laptop:text-[2.25rem] font-semibold mb-[5.75rem] text-[1.2rem]
 }
 
 
@@ -26,11 +26,11 @@
 }
 
 .payment-details-texts h3{
-    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-[8rem] desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold laptop:w-[11rem]
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-[8rem] desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold laptop:w-[11rem] text-[0.8rem] items-center justify-center flex
 }
 
 .payment-details-texts h4{
-    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit   
+    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit flex items-center   text-[0.8rem] justify-center
 }
 
 
@@ -40,7 +40,7 @@
 
 
 .payment-detail-item {
-    @apply flex flex-col gap-[3.38rem]
+    @apply flex flex-col gap-[3.38rem] 
 }
 
 
@@ -120,11 +120,11 @@
 
 
 .remember-card {
-    @apply flex flex-row gap-[1.5rem] font-normal items-center justify-center w-[13.5rem]
+    @apply flex flex-row gap-[1.5rem] font-normal items-center justify-center w-[13.5rem] laptop:text-[1rem] text-[0.75rem]
 }
 
 .amount-to-pay {
-    @apply laptop:text-[2rem] font-normal text-[1.5rem]
+    @apply laptop:text-[2rem] font-normal text-[0.9rem]
 }
 
 .card-detail-container {
@@ -133,7 +133,7 @@
 }
 
 .card-detail-text {
-    @apply text-[2rem] leading-normal font-semibold mt-[2.06rem] ml-[0.94rem] mb-[6rem]
+    @apply desktop:text-[2rem] leading-normal font-semibold mt-[2.06rem] ml-[0.94rem] mb-[6rem] text-[1.2rem]
 }
 
 
@@ -168,12 +168,12 @@ input:focus {
 
 
 .card-input label {
-    @apply text-[1.25rem] font-normal mb-[2.25rem]
+    @apply laptop:text-[1.25rem] font-normal mb-[2.25rem] text-[0.9rem]
 }
 
 .card-number-line {
     background: rgba(0, 0, 0, 0.50);
-    @apply laptop:w-[28.1rem] h-[0.062rem] mb-[0.5rem] w-[100%]
+    @apply laptop:w-[28.1rem] h-[0.062rem] mb-[0.5rem] w-[100%] 
 }
 
 .master-card-input {
@@ -194,11 +194,11 @@ input:focus {
 }
 
 .deets-form {
-    @apply flex flex-col laptop:max-w-[9rem] max-w-fit items-center laptop:items-start
+    @apply flex flex-col laptop:max-w-[9rem] max-w-fit items-center laptop:items-start 
 }
 
 .deets-form h4 {
-    @apply mb-[2rem] text-[1.25rem] font-normal w-[9rem]
+    @apply mb-[2rem] laptop:text-[1.25rem] font-normal w-[9rem] items-center flex justify-center  text-[0.9rem]
 }
 
 .deets-form input {
@@ -262,23 +262,26 @@ input:focus {
   }
 
   .cancle{
-    @apply absolute top-[3.12rem] right-[3.38rem] 
+    @apply absolute laptop:top-[3.12rem] laptop:right-[3.38rem]  desktop:h-[auto] desktop:w-[auto]  w-[1rem] h-[1rem]  top-[1.41rem] right-[1.52rem]
   }
   
 .success-icon{
-    @apply mb-[4rem]
+    @apply laptop:mb-[4rem] mb-[1.8rem] 
 }
 
 .success-text{
-    @apply laptop:text-[1.5rem] font-semibold text-[0.75rem]
+    @apply laptop:text-[1.5rem] font-semibold text-[0.75rem] h-fit
 }
 
   .modal-content h2 {
     margin-bottom: 10px;
+    @apply overflow-y-hidden
   }
   
   .modal-content p {
     margin-bottom: 20px;
+    @apply overflow-y-hidden
+
   }
   
 
