@@ -15,7 +15,7 @@ const Checkout = () => {
 
 
                 <div className='W-[100%]' >
-                    <Link className="absolute top-[1.75rem] left-[5.75rem] " to="/" >
+                    <Link className="absolute laptop:top-[1.75rem] laptop:left-[5.75rem] top-[1rem] left-[2rem]  " to="/" >
                         <img src={back} alt="" />
 
                     </Link>
@@ -40,7 +40,7 @@ const Checkout = () => {
 
                                     <div className="express-del">
 
-                                        <h2>Express Delivery</h2>
+                                        <h2 className='text-[0.75rem] laptop:text-[1rem]' >Express Delivery</h2>
 
                                         <p>Free</p>
 
