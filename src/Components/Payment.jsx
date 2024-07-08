@@ -68,9 +68,9 @@ const Payment = () => {
 
 
                             <div className="payment-details-texts mb-[4rem]">
-                                <h4 className=' flex items-center justify-center' >Item</h4>
+                                <h4 className=' flex items-center justify-center laptop:pt-[1rem]' >Item</h4>
 
-                                <h3 className='' >Kingsize Bedding and Platform</h3>
+                                <h3 className='mmkm' >Kingsize Bedding and Platform</h3>
 
 
                             </div>

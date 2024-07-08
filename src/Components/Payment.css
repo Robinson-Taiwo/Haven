@@ -1,6 +1,6 @@
 .checkout-page {
     /* padding-bottom: 6rem; */
-    @apply pt-[1.34rem]  laptop:px-[4rem] desktop:px-[6.25rem] px-[1rem] h-[100vh] w-[100vw]
+    @apply pt-[1.34rem]  laptop:px-[3rem] desktop:px-[6.25rem] px-[1rem] h-[100vh] w-[100vw]
 }
 
 .checkout-back {
@@ -26,7 +26,7 @@
 }
 
 .payment-details-texts h3{
-    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-[8rem] desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold laptop:w-[11rem]
 }
 
 .payment-details-texts h4{
@@ -177,7 +177,7 @@ input:focus {
 }
 
 .master-card-input {
-    @apply flex flex-row gap-[4.5rem] h-fit
+    @apply flex flex-row desktop:gap-[4.5rem]  laptop:gap-[0rem] h-fit
 }
 
 .master-card-icon {
