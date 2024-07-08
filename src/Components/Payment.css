@@ -13,7 +13,7 @@
 }
 
 .payment-container {
-    @apply mt-[1.88rem] laptop:w-[36.4rem]  w-[100%] px-[1rem]
+    @apply mt-[1.88rem] laptop:w-[36.4rem] tablet:w-[30rem]  w-[100%] px-[1rem]
 }
 
 .Payment-text {
@@ -26,16 +26,16 @@
 }
 
 .payment-details-texts h3{
-    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-[8rem] desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold laptop:w-[11rem] text-[0.8rem] items-center justify-center flex
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-[8rem] desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold laptop:w-[11rem] text-[0.8rem] items-center justify-center flex 
 }
 
 .payment-details-texts h4{
-    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit flex items-center   text-[0.8rem] justify-center
+    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit flex items-center   text-[0.8rem] justify-center tablet:text-[1.1rem]
 }
 
 
 .payment-detail-item h4 {
-    @apply desktop:text-[1.5rem] desktop:w-[12.37rem] laptop:text-[1.2rem] font-semibold w-fit
+    @apply desktop:text-[1.5rem] desktop:w-[12.37rem] laptop:text-[1.2rem] font-semibold w-fit tablet:text-[1.1rem]
 }
 
 
@@ -257,7 +257,7 @@ input:focus {
     /* width: 45rem;
     height: 32rem; */
     border-radius: 1.5625rem; 
-    @apply relative flex items-center justify-center flex-col laptop:w-[45rem] laptop:h-[32rem]  h-[14.437rem] w-[20rem]
+    @apply relative flex items-center justify-center flex-col laptop:w-[45rem] laptop:h-[32rem]  h-[14.437rem] w-[20rem]  tablet:h-[22.437rem] tablet:w-[28rem]
 
   }
 
@@ -270,7 +270,7 @@ input:focus {
 }
 
 .success-text{
-    @apply laptop:text-[1.5rem] font-semibold text-[0.75rem] h-fit
+    @apply laptop:text-[1.5rem] font-semibold text-[1rem] h-fit
 }
 
   .modal-content h2 {
