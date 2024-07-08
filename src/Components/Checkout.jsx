@@ -36,7 +36,7 @@ const Checkout = () => {
                                 <div className="ffd">
                                     <div>
 
-                                        <h2>Delivery Method </h2>
+                                        <h2 className='dvm' >Delivery Method </h2>
                                     </div>
 
                                     <div className="express-del">

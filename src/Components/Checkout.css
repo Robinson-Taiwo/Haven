@@ -3,7 +3,7 @@
 }
 
 .out-container {
-    @apply flex flex-row gap-[1.38rem]
+    @apply flex desktop:flex-row gap-[1.38rem] flex-col bg-[white] w-[23.4375rem] items-start laptop:w-[100%] laptop:justify-center
 }
 
 .delivery-container {
@@ -11,7 +11,7 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
 
     background: #FFF;
-    @apply laptop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem]
+    @apply laptop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem] w-[18.98rem] flex flex-col items-start
 }
 
 .d-first-frame {
@@ -28,6 +28,11 @@
     @apply flex flex-col gap-[1rem]
 }
 
+
+.dvm {
+    @apply text-[0.5rem] font-semibold laptop:text-[1rem]
+}
+
 .d-second-frame {
     height: fit-content;
     border-radius: 0.625rem;
@@ -39,7 +44,7 @@
 
 .delivery-address {
     border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.10);
-    @apply w-[100%] h-[5.25rem] flex items-center justify-start laptop:mb-[3.5rem]
+    @apply w-[100%] h-[5.25rem] flex items-center justify-start laptop:mb-[3.5rem] text-[0.5rem] laptop:text-[1rem]
 }
 
 .one-input-form input, .one-input-form select {
@@ -58,17 +63,20 @@
     @apply flex flex-col gap-[0.5rem]
 }
 
+.one-input-form p {
+    @apply text-[0.3125rem] laptop:text-[1rem]
+}
+
 
 .save-button {
     display: flex;
-    width: 25.6875rem;
     padding: 0.75rem 5rem;
     justify-content: center;
     align-items: center;
     border-radius: 0.625rem;
     border: 1px solid rgba(67, 72, 52, 0.20);
     background: rgba(130, 133, 120, 0.30);
-    @apply mt-[5rem]
+    @apply mt-[5rem] laptop:w-[25.6875rem]
 }
 
 .two-input-form {
@@ -80,7 +88,7 @@
     border-radius: 0.3125rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
     background: #FFF;
-    @apply w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem]
+    @apply laptop:w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem]
 }
 
 .oc-first-container {
@@ -119,8 +127,8 @@
 }
 
 .rc-image {
-    width: 11.5625rem;
     height: 13.22231rem;
+    @apply laptop:w-[11.5625rem]
 }
 
 .reciept-card-texts h1 {
@@ -169,13 +177,12 @@
 
 .rc-button button {
     display: flex;
-    width: 25.6875rem;
     padding: 0.75rem 5rem;
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
     border-radius: 0.625rem;
-    @apply bg-[#434834] flex flex-row gap-[0.62rem] text-white
+    @apply bg-[#434834] flex flex-row gap-[0.62rem] text-white laptop:w-[25.6875rem]
 }
 
 
