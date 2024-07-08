@@ -1,9 +1,16 @@
 .checkout-Page-section {
-    @apply w-[100vw] flex justify-center flex-col items-center relative pt-[6.19rem]
+    @apply w-[100vw] flex justify-center flex-col  items-center relative pt-[6.19rem] 
+}
+
+
+
+.pout-container{
+    /* @apply mx-[3rem] */
+    @apply flex items-center justify-center 
 }
 
 .out-container {
-    @apply flex desktop:flex-row gap-[1.38rem] flex-col bg-[white] w-[23.4375rem] items-start laptop:w-[100%] laptop:justify-center
+    @apply flex laptop:flex-row gap-[1.38rem] flex-col bg-[white] w-[23.4375rem] items-start  laptop:w-[80%] desktop:w-[100%] laptop:justify-center bg-[transparent] 
 }
 
 .delivery-container {
@@ -11,21 +18,21 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
 
     background: #FFF;
-    @apply laptop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem] w-[18.98rem] flex flex-col items-start
+    @apply desktop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem] w-[18.98rem] flex flex-col items-start laptop:w-[80%] 
 }
 
 .d-first-frame {
     border: 1px solid rgba(0, 0, 0, 0.20);
     background: #FFF;
-    @apply laptop:w-[43.06rem] laptop:h-[8.31rem] items-center flex flex-col justify-center gap-[1rem] rounded-[0.625rem] mb-[4rem]
+    @apply desktop:w-[43.06rem] laptop:h-[8.31rem] items-center flex flex-col justify-center gap-[1rem] rounded-[0.625rem] mb-[4rem] laptop:w-[100%]
 }
 
 .express-del {
-    @apply flex flex-row laptop:w-[37.25rem] justify-between
+    @apply flex flex-row desktop:w-[37.25rem] laptop:w-[100%] justify-between 
 }
 
 .ffd {
-    @apply flex flex-col gap-[1rem]
+    @apply flex flex-col gap-[1rem] laptop:w-[90%]
 }
 
 
@@ -39,7 +46,7 @@
     border: 1px solid rgba(0, 0, 0, 0.20);
 
     background: #FFF;
-    @apply laptop:w-[43.06rem] px-[0.88rem]
+    @apply desktop:w-[43.06rem] px-[0.88rem] laptop:w-[100%]
 }
 
 .delivery-address {
@@ -88,7 +95,7 @@
     border-radius: 0.3125rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
     background: #FFF;
-    @apply laptop:w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem]
+    @apply desktop:w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem] laptop:w-[40rem]
 }
 
 .oc-first-container {
@@ -123,7 +130,7 @@
 
 
 .reciept-card-texts {
-    @apply flex flex-col w-[14.5625rem]
+    @apply flex flex-col desktop:w-[14.5625rem] laptop:gap-[1rem]  laptop:w-[10rem]
 }
 
 .rc-image {
@@ -134,10 +141,11 @@
 .reciept-card-texts h1 {
     color: #000;
     font-family: Lato;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    @apply desktop:text-[1.25rem] 
 }
 
 .reciept-card-texts p {
@@ -150,7 +158,7 @@
 }
 
 .reciept-card {
-    @apply flex flex-row justify-between mt-[2.75rem] mb-[3.09rem]
+    @apply flex flex-row justify-between mt-[2.75rem] mb-[3.09rem] 
 }
 
 .rc-calc {
@@ -175,7 +183,7 @@
     @apply mt-[6rem] w-[100%] justify-center items-center mb-[2.81rem] flex
 }
 
-.rcbl{
+.rc-button button {
     display: flex;
     padding: 0.75rem 5rem;
     justify-content: center;
