@@ -26,7 +26,7 @@
 }
 
 .quantity {
-    @apply flex flex-row laptop:gap-[0.88rem] gap-[0.33rem] laptop:text-[1rem] text-[0.376rem]
+    @apply flex flex-row laptop:gap-[0.88rem] gap-[0.33rem] laptop:text-[1rem] text-[0.376rem] items-center
 }
 
 .quantity img {
