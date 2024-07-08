@@ -10,7 +10,7 @@
   justify-content: end;
   align-items: center;
   z-index: 1000;
-  @apply justify-center desktop:top-[0rem] laptop:pt-[9.75rem]
+  @apply laptop:justify-center desktop:top-[0rem] laptop:pt-[9.75rem]
   /* High z-index to ensure it's above all content */
 }
 
@@ -19,7 +19,7 @@
 }
 
 .cart-content-nav {
-  @apply h-[1.71rem]  overflow-y-hidden
+  @apply h-[1.71rem] overflow-y-hidden
 }
 
 .cart-content-nav {
@@ -76,7 +76,7 @@
 }
 
 .cart-card-deets p {
-  @apply laptop:text-[1rem] text-[#D50000]
+  @apply laptop:text-[1rem] text-[0.1875rem] text-[#D50000]
 }
 
 
@@ -97,4 +97,11 @@
 
 .card-cart-quantity p {
   @apply text-[0.25rem] laptop:text-[1rem]
+}
+
+
+@media (max-width: 767px) {
+  .llop :nth-child(2) {
+    @apply hidden laptop:flex
+  }
 }

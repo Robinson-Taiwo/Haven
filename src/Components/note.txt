@@ -1,0 +1,283 @@
+import React from "react";
+import close from "../assets/icons/close-circle.svg";
+import cart from "../assets/icons/small-cart.svg";
+import image from "../assets/images/image2.png";
+import plus from "../assets/icons/plus.svg";
+import minus from "../assets/icons/minus.svg";
+import "./Cart.css";
+import { Link } from "react-router-dom";
+
+const Cart = ({ openCart, setOpenCart }) => {
+    return (
+        <div className="cart-container">
+            <div className="cart-content-container">
+                <div className="cart-content-nav">
+                    <img className="ccni" src={cart} alt="" />
+
+                    <p>REVIEW YOUR CART</p>
+
+                    <img
+                        className="ccni"
+                        onClick={() => setOpenCart(!openCart)}
+                        src={close}
+                        alt=""
+                    />
+                </div>
+
+                <div className="cart-line"></div>
+
+                <div className="success-cart">
+                    <span>World wide shipping</span> <span>+</span>{" "}
+                    <span>Easy Returns</span>
+                </div>
+
+                <div className="justify-center flex w-[100%]">
+                    <div className="cart-line laptop:w-[23.1rem] mt-[0.33rem] w-[6.4735rem] mb-[1.56rem] laptop:mb-[5.19rem]  "></div>
+                </div>
+
+                <div>
+                    <div className="cart-card">
+                        <img src={image} alt="" className="cart-card-image" />
+
+                        <div className="cart-card-texts">
+                            <div className="cart-card-deets">
+                                <h1>King-size Bedding And Platform</h1>
+
+                                <h3>Size: 30 inches</h3>
+
+                                <h4>Price: NGN 500,000</h4>
+
+                                <h5>Warranty years: 1 year</h5>
+
+                                <p>Remove</p>
+                            </div>
+
+                            <div className="card-cart-quantity">
+                                <img src={plus} alt="" />
+
+                                <p>1</p>
+
+                                <img src={minus} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="cart-line w-[100%] mt-[1.96rem] "></div>
+                </div>
+
+                <div>
+                    <div className="cart-card laptop:mt-[7rem] mt-[1.96rem]">
+                        <img src={image} alt="" className="cart-card-image" />
+
+                        <div className="cart-card-texts">
+                            <div className="cart-card-deets">
+                                <h1>King-size Bedding And Platform</h1>
+
+                                <h3>Size: 30 inches</h3>
+
+                                <h4>Price: NGN 500,000</h4>
+
+                                <h5>Warranty years: 1 year</h5>
+
+                                <p>Remove</p>
+                            </div>
+
+                            <div className="card-cart-quantity  gap-[0.25rem] ">
+                                <img src={plus} alt="" />
+
+                                <p>1</p>
+
+                                <img src={minus} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="cart-line w-[100%] mt-[1.96rem] laptop:mt-[7rem] "></div>
+
+                    <div className="h-[50vh]" >
+
+
+                        <div className="may-like w-[100%] flex justify-center  ">
+                            <h1 className="may-like-text text-[0.4975rem] font-semibold laptop:text-[1.5rem] laptop:mt-[4.31rem] ">
+                                YOU MAY ALSO LIKE
+                            </h1>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="cart-fixed  bottom-[0]" >
+
+                        <div className="subtotal-cart  laptop:pt-[4.44rem] pt-[1.24rem] laptop:px-[5.08rem] px-[1.42rem] flex flex-row justify-between laptop:mb-[4.44rem] mb-[1.47rem] laptop:text-[1.5rem] text-[0.375rem] font-semibold ">
+                            <p> SUBTOTAL</p>
+
+                            <h4>NGN 1,000,000.00</h4>
+                        </div>
+
+                        <div className="flex justify-center ">
+                            <Link to="/checkout" className="cart-checkout laptop:px-[5rem] px-[1.4rem] bg-[#434834] text-[white] text-[0.5rem] laptop:py-[0.75rem] laptop:text-[1rem] py-[0.21rem] rounded-[0.17494rem] laptop:mb-[6.31rem] mb-[1.49rem] laptop:rounded-[0.625rem] ">
+                                CHECKOUT
+                            </Link>
+                        </div>
+
+                        <div className="items-center flex justify-center w-[100%]">
+                            <p className="w-[18.75rem] laptop:text-[1rem] laptop:w-[69.87rem] text-[0.25rem] laptop:mb-[4.44rem] ">
+                                By clicking on “CHECKOUT”, you will be directed to the checkout
+                                page where payment will be taken and your order fulfilled using
+                                your payment card. Note that we “ONLY” accept valid payment card
+                                (Master Card, Verve Card and Visa).
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Cart;
+
+
+
+
+
+
+
+
+.cart-container {
+  position: fixed;
+  top: 3.769rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 1000;
+  @apply justify-center desktop:top-[0rem] laptop:pt-[9.75rem]
+  /* High z-index to ensure it's above all content */
+}
+
+.cart-content-container {
+  @apply bg-[#FAF5FF] h-[100%] w-[92.255%] laptop:w-[78rem]
+}
+
+.cart-content-nav {
+  @apply h-[1.71rem]  overflow-y-hidden
+}
+
+.cart-content-nav {
+  @apply w-[100%] flex flex-row items-center justify-between px-[1.28rem] text-[0.44rem] font-bold laptop:text-[1.5rem] laptop:px-[5.62rem] laptop:pt-[2.25rem] laptop:pb-[2.06rem]
+}
+
+.ccni {
+  @apply laptop:h-[1.5rem] laptop:w-[1.5rem]
+}
+
+.cart-line {
+  background: rgba(0, 0, 0, 0.15);
+  height: 0.0175rem;
+  width: 100%;
+  @apply mb-[0.75rem]
+}
+
+.success-cart {
+  @apply flex flex-row justify-center gap-[0.125rem] text-[#0BAB12] text-[0.65rem] font-medium laptop:text-[1rem] laptop:gap-[0.5rem] laptop:mt-[2.66rem]
+}
+
+
+.cart-card {
+  @apply pl-[1.59rem] flex flex-row gap-[2.5rem]
+}
+
+.cart-card-deets {
+  @apply flex flex-col gap-[0.24rem]
+}
+
+.cart-card-texts {
+  @apply flex flex-row gap-[1.38rem] laptop:gap-[10rem]
+}
+
+.cart-card-image {
+  @apply w-[6.4718rem] h-[7.401rem] laptop:w-[23.12rem] laptop:h-[26.44rem]
+}
+
+.cart-card-deets h1 {
+  @apply text-[0.43711rem] font-semibold laptop:text-[1.5rem]
+}
+
+.cart-card-deets h3 {
+  @apply text-[0.375rem] font-medium laptop:text-[1.25rem]
+}
+
+.cart-card-deets h4 {
+  @apply text-[0.312rem] font-medium laptop:text-[1rem]
+}
+
+
+.cart-card-deets h5 {
+  @apply text-[0.25rem] font-medium laptop:text-[1rem]
+}
+
+.cart-card-deets p {
+  @apply laptop:text-[1rem] text-[0.1875rem] text-[#D50000]
+}
+
+
+
+
+.card-cart-quantity {
+  border: 0.28px solid rgba(0, 0, 0, 0.50);
+  padding: 0.10494rem 0.25113rem 0.105rem 0.25113rem;
+
+  @apply flex flex-row h-fit laptop:rounded-[0.625rem] laptop:py-[0.375rem] laptop:px-[0.937rem] laptop:gap-[1rem]
+}
+
+.card-cart-quantity img {
+  width: 0.41988rem;
+  height: 0.41988rem;
+  @apply laptop:w-[1.5rem] laptop:h-[1.5rem]
+}
+
+.card-cart-quantity p {
+  @apply text-[0.25rem] laptop:text-[1rem]
+}
+
+
+
+
+
+
+
+
+ <div className="cart-fixed  bottom-[0]" >
+
+                        <div className="subtotal-cart  laptop:pt-[4.44rem] pt-[1.24rem] laptop:px-[5.08rem] px-[1.42rem] flex flex-row justify-between laptop:mb-[4.44rem] mb-[1.47rem] laptop:text-[1.5rem] text-[0.375rem] font-semibold ">
+                            <p> SUBTOTAL</p>
+
+                            <h4>NGN 1,000,000.00</h4>
+                        </div>
+
+                        <div className="flex justify-center ">
+                            <Link to="/checkout" className="cart-checkout laptop:px-[5rem] px-[1.4rem] bg-[#434834] text-[white] text-[0.5rem] laptop:py-[0.75rem] laptop:text-[1rem] py-[0.21rem] rounded-[0.17494rem] laptop:mb-[6.31rem] mb-[1.49rem] laptop:rounded-[0.625rem] ">
+                                CHECKOUT
+                            </Link>
+                        </div>
+
+                        <div className="items-center flex justify-center w-[100%]">
+                            <p className="w-[18.75rem] laptop:text-[1rem] laptop:w-[69.87rem] text-[0.25rem] laptop:mb-[4.44rem] ">
+                                By clicking on “CHECKOUT”, you will be directed to the checkout
+                                page where payment will be taken and your order fulfilled using
+                                your payment card. Note that we “ONLY” accept valid payment card
+                                (Master Card, Verve Card and Visa).
+                            </p>
+                        </div>
+
+
+
+                    </div>

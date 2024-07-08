@@ -1,222 +1,188 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import back from "../assets/icons/arrow-left.svg"
-import mastercard from "../assets/icons/mastercard.svg"
-import cancle from "../assets/icons/close.svg"
-import success from "../assets/icons/Success.svg"
 
 import "./Checkout.css"
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
-
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => {
-        setIsModalOpen(true);
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-        document.body.style.overflow = 'auto'; // Allow scrolling
-    };
-
     return (
         <>
 
-            <section className="checkout-page">
-
-                <Link to="/" >
-
-                    <img src={back} alt="" className="checkout-back" />
-
-                </Link>
+            <div className="checkout-Page-section">
 
 
-                <div className='w-[100%] flex items-center justify-center ' >
-
-                    <div className="checkout-container">
-
-                        <div className="payment-container">
-
-                            <h1 className="Payment-text">Payment</h1>
 
 
-                            <div className="payment-details-container">
+                <div className='W-[100%]' >
+                    <Link className="absolute top-[1.75rem] left-[5.75rem] " to="/" >
+                        <img src={back} alt="" />
+
+                    </Link>
+                </div>
 
 
-                                <div className="payment-details-texts">
+                <div className='' >
 
-                                    <h4>Item</h4>
+                    <div className="out-container">
 
-                                    <h4>Amount:</h4>
+                        <div className="delivery-container">
+
+
+
+
+                            <div className="d-first-frame">
+
+                                <div className="ffd">
+                                    <div>
+
+                                        <h2>Delivery Method </h2>
+                                    </div>
+
+                                    <div className="express-del">
+
+                                        <h2>Express Delivery</h2>
+
+                                        <p>Free</p>
+
+                                    </div>
+
+                                    <div>
+                                        <p>Delivered on or before Wednesday 10th July</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div className="d-second-frame">
+
+
+                                <div className='delivery-address' >
+                                    <h2>Delivery Address </h2>
+                                </div>
+
+
+
+                                <div className="long-input-forms flex flex-col gap-[2.25rem]">
+
+                                    <div className="one-input-form">
+                                        <label htmlFor="">Email Address*</label>
+
+                                        <input type="text" />
+
+                                    </div>
+
+                                    <div className="two-input-form">
+                                        <div className="one-input-form laptop:w-[19.625rem] ">
+                                            <label htmlFor="">First Name*</label>
+
+                                            <input type="text" />
+
+                                        </div>
+
+                                        <div className="one-input-form laptop:w-[19.625rem] ">
+                                            <label htmlFor="">Last Name*</label>
+
+                                            <input type="text" />
+
+                                        </div>
+
+                                    </div>
+
+                                    <div className="one-input-form">
+                                        <label htmlFor="">State/Province*</label>
+
+                                        <select type="text" />
+
+                                    </div>
+
+                                    <div className="one-input-form">
+                                        <label htmlFor="">Street Address*</label>
+
+                                        <input type="text" />
+
+                                    </div>
+
+
+
+                                    <div className="two-input-form">
+                                        <div className="one-input-form laptop:w-[19.625rem] ">
+                                            <label htmlFor="">City*</label>
+
+                                            <input type="text" />
+
+                                        </div>
+
+                                        <div className="one-input-form laptop:w-[19.625rem] ">
+                                            <label htmlFor="">Region*</label>
+
+                                            <input type="text" />
+
+                                        </div>
+
+                                    </div>
+
+                                    <div className="two-input-form">
+                                        <div className="one-input-form laptop:w-[19.625rem] ">
+                                            <label htmlFor="">Area Number*</label>
+
+                                            <select className='w-[4.06rem]' value="+234" type="text" />
+
+                                        </div>
+
+                                        <div className="one-input-form laptop:w-[19.625rem] className='w-[34.25rem]'  ">
+                                            <label htmlFor="">Phone Number*</label>
+
+                                            <select />
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div className='flex items-center justify-center w-[100%]' >
+
+                                        <button className='save-button'>Save</button>
+                                    </div>
+
+
+
 
 
                                 </div>
 
-                                <div className="payment-detail-item mb-[0rem] ">
-
-                                    <h4>kingsize</h4>
-
-                                    <h4>NGN 500,000</h4>
 
 
-                                </div>
-                            </div>
-
-                            <div className="deets-line w-[36.4rem] mt-[3rem] mb-[3.37rem]"></div>
-
-
-
-
-
-
-                            {/* horizontal line */}
-                            {/* <div className="hr-line"></div> */}
-
-                            <div className="item-containerr">
-
-                                <p className="amount-to-pay">Amount to pay</p>
-
-                                <p className="kingsize-text text-[1.5rem] font-semibold ">NGN 500,000</p>
 
                             </div>
 
-                            <div className="remember-card py-[0.5rem]">
-                                <label className="custom-checkbox">
-                                    <input type="checkbox" className="checkbox" />
-                                    <span className="checkmark"></span>
-                                    <span className="remember">Remember card details</span>
-                                </label>
-                            </div>
+
+
 
                         </div>
 
-                        <div className="card-detail-container">
-
-                            <h1 className="card-detail-text">
-                                Card Details
-                            </h1>
-
-                            {/* <div className="card-form">
-
-                            <div className="card-input">
-
-                                <label htmlFor="#holder-name">Card Holder's Name</label>
-                                <input type="text" className='input-line' />
-
-                            </div>
 
 
-                        </div> */}
-
-                            <div className="card-form">
-
-                                <div className="card-input">
-
-                                    <label htmlFor="#holder-name">Card Holder's Name</label>
-                                    <input type="text" className='card-input-line' />
-
-                                    <div className="card-number-line">
-
-                                    </div>
-
-                                </div>
 
 
-                            </div>
-
-                            <div className="card-form">
-
-                                <div className="card-input">
-
-                                    <label htmlFor="#holder-name">Card Number</label>
-
-                                    <div className="master-card-input">
-
-                                        <input type="text" maxLength={16} className='card-input-line  w-[16.2rem] ' />
-
-                                        <img src={mastercard} className='master-card-icon' alt="master card icon" />
-                                    </div>
-                                    <div className="card-number-line">
-                                    </div>
-
-                                </div>
 
 
-                            </div>
 
 
-                            <div className="card-deets-container">
 
-                                <div className="deets-form  ">
-                                    <h4>Expiry Date</h4>
+                        <div className="order-container">
 
-                                    <input maxLength={9} type="text" />
 
-                                    <div className="deets-line"></div>
-
-                                </div>
-
-                                <div className="deets-form mb-[4.75rem]">
-                                    <h4>CVC/CVV</h4>
-
-                                    <div className='cvc  flex items-center justify-center w-[100%]'>
-
-                                        <input type="password" maxLength={3} className='cvc' />
-                                    </div>
-
-                                    <div className="deets-line "></div>
-
-                                </div>
-
-                            </div>
-
-                            <div className="primary-button-container">
-
-                                <button onClick={openModal} className="primary-button">
-                                    Pay now
-                                </button>
-
-                            </div>
 
                         </div>
 
                     </div>
                 </div>
 
-                <div className="App">
 
-                    {isModalOpen && (
-                        <div className="modal-overlay">
-                            <div className="modal-content">
+            </div>
 
-                                <button onClick={closeModal} className="cancle">
-                                    <img src={cancle} alt="cancle icon" />
-                                </button>
-
-
-                                <div className="overlay-content">
-
-                                    <img src={success} alt="check-icon" className="success-icon" />
-
-                                    <p className="success-text">
-                                        Payment Successful
-                                    </p>
-
-                                </div>
-
-                                <Link to="/" className='bth underline'>Back to Home</Link>
-
-
-                            </div>
-                        </div>
-                    )}
-                </div>
-
-
-            </section>
 
 
         </>

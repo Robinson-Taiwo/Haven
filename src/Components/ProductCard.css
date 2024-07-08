@@ -11,6 +11,8 @@
     @apply h-fit mb-[2.25rem] laptop:w-[auto]
 }
 
+
+
 /* .product-section-container{
     @apply 
 } */
@@ -43,7 +45,7 @@
 
 .old-price, .original-price {
     text-decoration-line: strikethrough;
-    @apply laptop:text-[0.875rem] text-[0.375rem] font-light
+    @apply laptop:text-[0.875rem] text-[0.437rem] font-light
 }
 
 .add-to-cart {

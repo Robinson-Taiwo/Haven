@@ -1,287 +1,85 @@
-.checkout-page {
-    /* padding-bottom: 6rem; */
-    @apply pt-[1.34rem] px-[6.25rem] h-[100vh] w-[100vw]
+
+.checkout-Page-section{
+    @apply w-[100vw] flex justify-center flex-col items-center relative pt-[6.19rem]
 }
 
-.checkout-back {
-    @apply ml-[0.12rem] mb-[2.5rem]
+.out-container {
+    @apply flex flex-row gap-[1.38rem] 
 }
 
-.checkout-container {
-    border: 1px solid rgba(8, 72, 125, 0.15);
-    @apply bg-[rgb(255,255,255)] h-[51rem] w-[77.5rem] pl-[1.87rem] flex flex-row desktop:gap-[5.62rem]  laptop:gap-[3rem]
+.delivery-container {
+    border-radius: 0.3125rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    background: #FFF;
+    @apply laptop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem]
 }
 
-.payment-container {
-    @apply mt-[1.88rem] w-[36.4rem] 
+.d-first-frame {
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    @apply laptop:w-[43.06rem] laptop:h-[8.31rem] items-center flex flex-col justify-center gap-[1rem] rounded-[0.625rem] mb-[4rem]
 }
 
-.Payment-text {
-    @apply text-[2.25rem] font-semibold mb-[5.75rem]
+.express-del {
+    @apply flex flex-row laptop:w-[37.25rem] justify-between
+}
+
+.ffd {
+    @apply flex flex-col gap-[1rem]
+}
+
+.d-second-frame {
+    height: fit-content;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+
+    background: #FFF;
+    @apply laptop:w-[43.06rem] px-[0.88rem]
+}
+
+.delivery-address {
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.10);
+    @apply w-[100%] h-[5.25rem] flex items-center justify-start laptop:mb-[3.5rem]
+}
+
+.one-input-form input, .one-input-form select {
+    border-radius: 0.625rem;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    height: 2.5625rem;
+    @apply w-[100%] bg-transparent
 }
 
 
-.payment-details-texts {
-    @apply flex flex-col gap-[3.38rem]
+.one-input-form input, .one-input-form select:focus{
+    @apply outline-none
 }
 
-.payment-details-texts h4 {
-    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit
-}
-
-
-.payment-detail-item h4 {
-    @apply desktop:text-[1.5rem] laptop:text-[1.2rem] font-semibold w-fit
+.one-input-form {
+    @apply flex flex-col gap-[0.5rem]
 }
 
 
-.payment-detail-item {
-    @apply flex flex-col gap-[3.38rem]
+.save-button {
+    display: flex;
+    width: 25.6875rem;
+    padding: 0.75rem 5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(67, 72, 52, 0.20);
+    background: rgba(130, 133, 120, 0.30);
+    @apply mt-[5rem]
 }
 
-
-.payment-details-container {
+.two-input-form {
     @apply flex flex-row justify-between
 }
 
-
-.item-containerr{
-    @apply flex flex-row justify-between mb-[12rem]
+.order-container{
+    height: 56.5rem;
+    border-radius: 0.3125rem;
+border: 1px solid rgba(0, 0, 0, 0.15);
+background: #FFF;
+    @apply w-[32.4375rem] bg-[white]
 }
-
-.item-containerr p{
-    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]
-}
-
-.checkbox{
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.checkbox:checked{
-    @apply bg-red-400
-}
-
-
-/* Hide the default checkbox */
-.custom-checkbox input[type="checkbox"] {
-    display: none;
-}
-
-/* Create a custom checkbox */
-.custom-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-}
-
-/* Checkmark container */
-.custom-checkbox .checkmark {
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 0.5px solid rgba(0, 0, 0, 0.50);  /* Border color */
-    display: inline-block;
-    position: relative;
-    margin-right: 8px;
-    border-radius: 4px;  /* Add border radius for rounded corners */
-
-}
-
-/* Custom check mark (tiny) */
-.custom-checkbox .checkmark::after {
-    content: '';
-    position: absolute;
-    display: none;
-    left: 7px;  /* Adjust position for 24px size */
-    top: 4px;   /* Adjust position for 24px size */
-    width: 6px; /* Adjust size for 24px size */
-    height: 12px; /* Adjust size for 24px size */
-    border: solid #000;  /* Check mark color */
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-/* Show the check mark when checked */
-.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
-    display: block;
-}
-
-/* Remove the default blue background */
-.custom-checkbox input[type="checkbox"]:checked + .checkmark {
-    background-color: transparent;
-}
-
-
-
-
-.remember-card {
-    @apply flex flex-row gap-[1.5rem] font-normal items-center justify-center w-[13.5rem]
-}
-
-.amount-to-pay {
-    @apply text-[2rem] font-normal
-}
-
-.card-detail-container {
-    @apply w-[31.56rem] pr-[2.19rem]
-}
-
-.card-detail-text {
-    @apply text-[2rem] leading-normal font-semibold mt-[2.06rem] ml-[0.94rem] mb-[6rem]
-}
-
-
-.card-form {
-    /* background: rgba(67, 72, 52, 0.08); */
-
-    @apply ml-[0.63rem] pl-[0.62rem] mr-[1.12rem] flex flex-col w-[100%] gap-[2.25rem] mb-[2.5rem] pt-[0.62rem]
-}
-
-.card-input {
-    @apply flex flex-col
-}
-
-.input-line {
-    border-top: none;
-    background: transparent;
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.50);
-    @apply h-[2.25rem] text-[1.5rem] mb-[0.5rem] pb-[1rem] w-[27.9rem]
-}
-
-input:focus {
-    outline: none;
-
-}
-
-.card-input-line {
-    border-top: none;
-    background: transparent;
-    border-bottom: none;
-    @apply h-[1.81rem] text-[1.5rem] w-[27.9rem] mb-[1rem] pb-[0rem] font-semibold pl-[0.1rem] overflow-y-hidden
-}
-
-
-.card-input label {
-    @apply text-[1.25rem] font-normal mb-[2.25rem]
-}
-
-.card-number-line {
-    background: rgba(0, 0, 0, 0.50);
-    @apply w-[28.1rem] h-[0.062rem] mb-[0.5rem]
-}
-
-.master-card-input {
-    @apply flex flex-row gap-[4.5rem] h-fit
-}
-
-.master-card-icon {
-    @apply h-[1.81rem]
-}
-
-.card-deets-container {
-    @apply px-[1rem] py-[0.5rem] flex flex-row desktop:gap-[8rem]  laptop:gap-[5rem]
-}
-
-.deets-line {
-    background: rgba(0, 0, 0, 0.50);
-    @apply w-[9.875rem] h-[0.062rem]
-}
-
-.deets-form {
-    @apply flex flex-col laptop:max-w-[9rem]
-}
-
-.deets-form h4 {
-    @apply mb-[2rem] text-[1.25rem] font-normal w-[9rem]
-}
-
-.deets-form input {
-    @apply mb-[1rem] w-[8rem] border-none h-[1.81rem] text-[1.5rem] font-semibold
-}
-
-.cvc input {
-    @apply w-[3.5rem]
-}
-
-.primary-button-container{
-    @apply w-[100%] justify-center items-center flex
-}
-
-.primary-button{
-    @apply  px-[0.625rem] flex items-center justify-center rounded-[0.625rem] bg-[#434834] text-[#f4f4f4] font-medium text-[1rem] w-[12.31rem] h-[3rem]
-}
-
-.success-modal{
-    @apply absolute z-30 h-[100vh] w-[100vw]
-}
-
-
-
-
-
-/* App container */
-.App {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Modal overlay */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* High z-index to ensure it's above all content */
-  }
-  
-  /* Modal content */
-  .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 45rem;
-    width: 45rem;
-    height: 32rem;
-    border-radius: 1.5625rem;
-    @apply relative flex items-center justify-center flex-col
-
-  }
-
-  .cancle{
-    @apply absolute top-[3.12rem] right-[3.38rem] 
-  }
-  
-.success-icon{
-    @apply mb-[4rem]
-}
-
-.success-text{
-    @apply text-[1.5rem] font-semibold
-}
-
-  .modal-content h2 {
-    margin-bottom: 10px;
-  }
-  
-  .modal-content p {
-    margin-bottom: 20px;
-  }
-  
-
-
-  .overlay-content{
-    @apply  w-[13.625rem] pt-[1rem] flex flex-col items-center justify-center
-  }
-
-  .bth{
-    @apply font-medium text-[#424242] mt-[1.5rem]
-  }
