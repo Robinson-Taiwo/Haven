@@ -1,6 +1,6 @@
 .checkout-page {
     /* padding-bottom: 6rem; */
-    @apply pt-[1.34rem] laptop:px-[6.25rem] px-[1rem] h-[100vh] w-[100vw]
+    @apply pt-[1.34rem]  laptop:px-[4rem] desktop:px-[6.25rem] px-[1rem] h-[100vh] w-[100vw]
 }
 
 .checkout-back {
@@ -22,16 +22,20 @@
 
 
 .payment-details-texts {
-    @apply flex flex-col gap-[3.38rem]
+    @apply flex flex-row justify-between
 }
 
-.payment-details-texts h4 {
-    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit
+.payment-details-texts h3{
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold
+}
+
+.payment-details-texts h4{
+    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit   
 }
 
 
 .payment-detail-item h4 {
-    @apply desktop:text-[1.5rem] laptop:text-[1.2rem] font-semibold w-fit
+    @apply desktop:text-[1.5rem] desktop:w-[12.37rem] laptop:text-[1.2rem] font-semibold w-fit
 }
 
 

@@ -43,27 +43,48 @@ const Payment = () => {
                             <h1 className="Payment-text">Payment</h1>
 
 
-                            <div className="payment-details-container">
+                            {/* <div className="payment-details-container">
 
 
                                 <div className="payment-details-texts">
 
-                                    <h4>Item</h4>
+                                    <h4 className='mt-[1rem]' >Item</h4>
 
-                                    <h4>Amount:</h4>
+                                    <h4 className='mt-[1rem]' >Amount:</h4>
 
 
                                 </div>
 
                                 <div className="payment-detail-item mb-[0rem] ">
 
-                                    <h4>kingsize</h4>
+                                    <h4 className='' >Kingsize Bedding and Platform</h4>
 
                                     <h4>NGN 500,000</h4>
 
 
                                 </div>
+                            </div> */}
+
+
+
+                            <div className="payment-details-texts mb-[4rem]">
+                                <h4 className=' flex items-center justify-center' >Item</h4>
+
+                                <h3 className='' >Kingsize Bedding and Platform</h3>
+
+
                             </div>
+
+                            <div className="payment-details-texts">
+                                <h4 className='mt-[1rem]' >Amount:</h4>
+
+                                <h3 className='' >NGN 1,000,000</h3>
+
+
+                            </div>
+
+
+
 
                             <div className="deets-line w-[100%] laptop:w-[36.4rem] mt-[3rem] mb-[3.37rem]"></div>
 
@@ -79,7 +100,7 @@ const Payment = () => {
 
                                 <p className="amount-to-pay">Amount to pay</p>
 
-                                <p className="kingsize-text laptop:text-[1.5rem] font-semibold ">NGN 500,000</p>
+                                <p className="kingsize-text laptop:text-[1.5rem] font-semibold pr-[1.2rem] ">NGN 1,000,000</p>
 
                             </div>
 
