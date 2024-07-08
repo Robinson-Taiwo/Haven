@@ -270,7 +270,7 @@ input:focus {
 }
 
 .success-text{
-    @apply laptop:text-[1.5rem] font-semibold text-[1rem] h-fit
+    @apply laptop:text-[1.5rem] font-semibold text-[1rem] h-[3rem] leading-[1.5] 
 }
 
   .modal-content h2 {
@@ -291,5 +291,5 @@ input:focus {
   }
 
   .bth{
-    @apply font-medium text-[#424242] mt-[1.5rem]
+    @apply font-medium text-[#424242] laptop:mt-[1.5rem]  mt-[1rem] h-[3rem]
   }
