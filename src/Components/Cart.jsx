@@ -90,7 +90,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                     </div>
 
                     <div>
-                        <div className="cart-card laptop:mt-[7rem] mt-[1.96rem]">
+                        {/* <div className="cart-card laptop:mt-[7rem] mt-[1.96rem]">
                             <img src={image1} alt="" className="cart-card-image" />
 
                             <div className="cart-card-texts">
@@ -114,7 +114,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                                     <img src={minus} alt="" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="cart-line w-[100%] mt-[1.96rem] laptop:mt-[7rem] "></div>
 
                         <div className="">
