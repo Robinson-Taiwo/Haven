@@ -35,7 +35,7 @@ const Cart = ({ openCart, setOpenCart }) => {
     return (
         <div className="cart-container">
             <div className="cart-content-container">
-                <div className="h-[70vh]">
+                <div className="h-[]">
                     <div className="cart-content-nav">
                         <img className="ccni" src={cart} alt="" />
 
@@ -90,31 +90,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                     </div>
 
                     <div>
-                        {/* <div className="cart-card laptop:mt-[7rem] mt-[1.96rem]">
-                            <img src={image1} alt="" className="cart-card-image" />
-
-                            <div className="cart-card-texts">
-                                <div className="cart-card-deets">
-                                    <h1>King-size Bedding And Platform</h1>
-
-                                    <h3>Size: 30 inches</h3>
-
-                                    <h4>Price: NGN 500,000</h4>
-
-                                    <h5>Warranty years: 1 year</h5>
-
-                                    <p>Remove</p>
-                                </div>
-
-                                <div className="card-cart-quantity  gap-[0.25rem] ">
-                                    <img src={plus} alt="" />
-
-                                    <p>1</p>
-
-                                    <img src={minus} alt="" />
-                                </div>
-                            </div>
-                        </div> */}
+                     
                         <div className="cart-line w-[100%] mt-[1.96rem] laptop:mt-[7rem] "></div>
 
                         <div className="">
@@ -127,7 +103,7 @@ const Cart = ({ openCart, setOpenCart }) => {
 
                                 <div>
                                     <div className="product-section pb-[0rem] mb-[0rem] ">
-                                        <div className="product-section-container llop mb-[0rem] ">
+                                        {/* <div className="product-section-container llop mb-[0rem] ">
                                             {products.map((product, index) => (
                                                 <ProductCard
                                                     openCart={openCart}
@@ -139,7 +115,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                                                     oldPrice={product.oldPrice}
                                                 />
                                             ))}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
