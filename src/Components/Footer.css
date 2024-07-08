@@ -1,6 +1,6 @@
 .footer-container {
     background: #D9DAD6;
-    @apply laptop:pl-[4.5rem] laptop:pr-[10.63rem] pt-[3.56rem] laptop:pt-[7.73rem] flex laptop:flex-row laptop:justify-between laptop:pb-[7.63rem] flex-col laptop:w-[100%] justify-center pb-[2rem] items-center
+    @apply laptop:pl-[4.5rem] laptop:pr-[7rem] desktop:pr-[10.63rem] pt-[3.56rem] laptop:pt-[7.73rem] flex laptop:flex-row laptop:justify-between laptop:pb-[7.63rem] flex-col laptop:w-[100%] justify-center pb-[2rem] items-center
 }
 
 .footer-first-container {

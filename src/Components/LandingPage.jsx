@@ -17,6 +17,25 @@ import Footer from "./Footer";
 const LandingPage = () => {
     const [activeLink, setActiveLink] = useState("");
 
+
+    const options = [
+        "Price: Low to High",
+        "Price: High to Low",
+        "Best Sellers",
+        "New Arrivals",
+    ];
+
+
+    const [selectedOption, setSelectedOption] = useState('Select an option');
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => setIsOpen(!isOpen);
+
+    const handleOptionClick = (option) => {
+        setSelectedOption(option);
+        setIsOpen(false);
+    };
+
     // Define nav items
     const navItems = ["Type", "Hot Deals", "Brand"];
 
@@ -25,20 +44,17 @@ const LandingPage = () => {
         setActiveLink(link);
     };
 
-    const [selected, setSelected] = useState("Sort by");
-    const [isOpen, setIsOpen] = useState(false);
-    const options = [
-        "Price: Low to High",
-        "Price: High to Low",
-        "Best Sellers",
-        "New Arrivals",
-    ];
+    // const options = [
+    //     { value: "price_low_to_high", label: "Price: Low to High" },
+    //     { value: "price_high_to_low", label: "Price: High to Low" },
+    //     { value: "best_sellers", label: "Best Sellers" },
+    //     { value: "new_arrivals", label: "New Arrivals" },
+    // ];
+    const [selectedValue, setSelectedValue] = useState(options[0].value); // Initialize with first option
 
-    const handleSelect = (option) => {
-        setSelected(option);
-        setIsOpen(false);
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
     };
-
     return (
         <>
             {/* this is the navbar container for navigation */}
@@ -101,9 +117,10 @@ const LandingPage = () => {
                         <span>23:20:01</span>
                     </div>
 
-                    <div className="dropdown">Sort by</div>
-                </div>
 
+                    <div className="dropdown">sort by </div>
+
+                </div>
                 <div className="product-section">
                     <div className="product-section-container">
                         {data.map((product, index) => (
@@ -122,6 +139,8 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+
 
 
             <>
