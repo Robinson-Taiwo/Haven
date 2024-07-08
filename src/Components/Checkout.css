@@ -6,7 +6,7 @@
 
 .pout-container{
     /* @apply mx-[3rem] */
-    @apply flex items-center justify-center 
+    @apply flex items-center justify-center  bg-red-400 
 }
 
 .out-container {

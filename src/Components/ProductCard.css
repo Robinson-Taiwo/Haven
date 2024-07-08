@@ -22,7 +22,7 @@
 }
 
 .product-card-rate {
-    @apply relative flex flex-row justify-between laptop:mb-[1.5rem] mb-[1.25rem]
+    @apply relative flex flex-row justify-between laptop:mb-[1.5rem] mb-[1.25rem] items-center
 }
 
 .quantity {
