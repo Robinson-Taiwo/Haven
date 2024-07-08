@@ -124,7 +124,8 @@
 }
 
 .card-detail-container {
-    @apply laptop:w-[31.56rem] h-fit laptop:pr-[2.19rem] w-[100%] mt-[7rem]  laptop:mt-[0rem]
+    background: rgba(217, 218, 214, 0.20);
+    @apply laptop:w-[33.56rem] h-fit laptop:pr-[2.19rem] w-[100%] mt-[7rem]  laptop:mt-[0rem]
 }
 
 .card-detail-text {

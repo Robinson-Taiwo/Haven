@@ -175,7 +175,7 @@
     @apply mt-[6rem] w-[100%] justify-center items-center mb-[2.81rem] flex
 }
 
-.rc-button button {
+.rcbl{
     display: flex;
     padding: 0.75rem 5rem;
     justify-content: center;

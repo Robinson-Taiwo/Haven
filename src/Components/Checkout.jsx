@@ -243,9 +243,9 @@ const Checkout = () => {
 
                             <div className="rc-button">
 
-                                <button>
+                                <Link className='rcbl' to="/payment" >
                                     <span><img src={wallet} alt="" /></span> <span> Pay Now</span>
-                                </button>
+                                </Link>
                             </div>
 
                             <div className="remember-card w-[100%] py-[0.5rem]">
@@ -264,15 +264,15 @@ const Checkout = () => {
 
                     </div>
                 </div>
-                    <div className="checkout-footer">
+                <div className="checkout-footer">
 
-                        <p>Terms and condition</p>
-                        <p>Privacy Policy</p>
-                        <p>Cookie Policy</p>
+                    <p>Terms and condition</p>
+                    <p>Privacy Policy</p>
+                    <p>Cookie Policy</p>
 
 
 
-                    </div>
+                </div>
 
 
             </div>

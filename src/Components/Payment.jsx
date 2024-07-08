@@ -173,7 +173,7 @@ const Payment = () => {
 
                             </div>
 
-                            <div className="primary-button-container">
+                            <div className="primary-button-container pb-[3rem] ">
 
                                 <button onClick={openModal} className="primary-button">
                                     Pay now
