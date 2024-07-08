@@ -47,7 +47,7 @@ const Checkout = () => {
                                     </div>
 
                                     <div>
-                                        <p>Delivered on or before Wednesday 10th July</p>
+                                        <p className='text-[0.75rem] laptop-[1rem] ' >Delivered on or before Wednesday 10th July</p>
 
                                     </div>
 
@@ -251,7 +251,7 @@ const Checkout = () => {
                                 <label className="custom-checkbox">
                                     <input type="checkbox" className="checkbox" />
                                     <span className="checkmark"></span>
-                                    <span className="remember text-[0.75rem] text-[black] ">I have read and agreed to the Haven shop Terms of Use and Privacy Policy.</span>
+                                    <span className="remember laptop:text-[0.75rem] text-[0.55rem] text-[black] ">I have read and agreed to the Haven shop Terms of Use and Privacy Policy.</span>
                                 </label>
                             </div>
 
