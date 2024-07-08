@@ -13,9 +13,11 @@ import "./LandingPage.css";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import Footer from "./Footer";
+import Cart from "./Cart";
 
 const LandingPage = () => {
     const [activeLink, setActiveLink] = useState("");
+    const [openCart, setOpenCart] = useState(false)
 
 
     const options = [
@@ -56,7 +58,9 @@ const LandingPage = () => {
         setSelectedValue(event.target.value);
     };
     return (
-        <>
+        <div className={` ${openCart ? "opc " : ""}`}  >
+
+
             {/* this is the navbar container for navigation */}
             <nav className="navbar-container">
                 <div className="navbar-links">
@@ -85,14 +89,21 @@ const LandingPage = () => {
                     <Link to="/user">
                         <img src={user} alt="" className="navbar-icon" />
                     </Link>
-                    <Link to="/cart">
+                    <div onClick={() => setOpenCart(!openCart)} >
+                        {console.log(openCart)}
                         <img src={cart} alt="" className="navbar-icon" />
-                    </Link>
+                    </div>
                 </div>
             </nav>
 
             {/*     Landing Page Hero Sction */}
-            <section className="hero-section">
+            <section className={`hero-section ${openCart ? "" : ""}`}>
+
+
+                {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart}  />} 
+                
+
+
                 <div className="hero-texts">
                     <h1>New Arrivals!!!</h1>
                     <h3 className="subheading">
@@ -125,6 +136,8 @@ const LandingPage = () => {
                     <div className="product-section-container">
                         {data.map((product, index) => (
                             <ProductCard
+                            openCart={openCart} 
+                            setOpenCart={setOpenCart}
                                 key={index}
                                 image={product.image}
                                 size={product.size}
@@ -148,7 +161,9 @@ const LandingPage = () => {
             </>
 
 
-        </>
+
+
+        </div>
     );
 };
 

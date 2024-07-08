@@ -6,7 +6,7 @@ import minus from "../assets/icons/minus.svg";
 
 import "./ProductCard.css";
 
-const ProductCard = ({ image, size, originalPrice, oldPrice }) => {
+const ProductCard = ({ image, size, originalPrice, oldPrice, openCart, setOpenCart }) => {
     return (
         <div className="ProductCard-container">
             <div className="productCard-image relative">
@@ -27,7 +27,7 @@ const ProductCard = ({ image, size, originalPrice, oldPrice }) => {
             </div>
             <div className="original-price mb-[1rem]">NGN {originalPrice}</div>
             <s className="old-price">NGN {oldPrice}</s>
-            <button className="add-to-cart">
+            <button  className="add-to-cart">
                 <span>+</span> <span>Add to cart</span>
             </button>
         </div>
