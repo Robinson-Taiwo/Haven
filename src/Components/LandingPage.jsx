@@ -100,8 +100,8 @@ const LandingPage = () => {
             <section className={`hero-section ${openCart ? "" : ""}`}>
 
 
-                {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart}  />} 
-                
+                {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart} />}
+
 
 
                 <div className="hero-texts">
@@ -129,15 +129,20 @@ const LandingPage = () => {
                     </div>
 
 
-                    <div className="dropdown">sort by </div>
+                    <div className="dropdown">
+
+                        <span>sort by</span>
+                        <span><img src={arrowd} alt="" /></span>
+
+                    </div>
 
                 </div>
                 <div className="product-section">
                     <div className="product-section-container">
                         {data.map((product, index) => (
                             <ProductCard
-                            openCart={openCart} 
-                            setOpenCart={setOpenCart}
+                                openCart={openCart}
+                                setOpenCart={setOpenCart}
                                 key={index}
                                 image={product.image}
                                 size={product.size}
