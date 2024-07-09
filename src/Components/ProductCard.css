@@ -4,11 +4,11 @@
 
 
 .star-image {
-    @apply w-[3.57rem] laptop:w-[auto]
+   @apply h-[4rem] laptop:h-[3rem] laptop:w-[50%] w-[5rem]
 }
 
 .productCard-image {
-    @apply h-fit mb-[2.25rem] laptop:w-[auto]
+    @apply h-fit laptop:mb-[2.25rem] laptop:w-[auto] 
 }
 
 
@@ -22,7 +22,7 @@
 }
 
 .product-card-rate {
-    @apply relative flex flex-row justify-between laptop:mb-[1.5rem] mb-[1.25rem] items-center
+    @apply relative flex flex-col-reverse justify-between laptop:mb-[1.5rem] mb-[0.5rem]  
 }
 
 .quantity {
@@ -36,16 +36,16 @@
 }
 
 .product-card-rate h6 {
-    @apply laptop:text-[0.875rem] text-[0.375rem]
+    @apply laptop:text-[0.875rem] text-[0.575rem]
 }
 
 .product-card-rate h3 {
-    @apply laptop:text-[1rem] text-[0.5rem] font-medium
+    @apply laptop:text-[1rem] text-[0.8rem] font-medium
 }
 
 .old-price, .original-price {
     text-decoration-line: strikethrough;
-    @apply laptop:text-[0.875rem] text-[0.437rem] font-light
+    @apply laptop:text-[0.875rem] text-[0.537rem] font-light
 }
 
 .add-to-cart {

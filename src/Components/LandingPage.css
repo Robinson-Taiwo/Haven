@@ -36,7 +36,7 @@
 
 
 /* styles for screens narrower than 768px */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .hero-section {
         @apply flex items-center justify-center
     }
@@ -51,7 +51,7 @@
 }
 
 .hero-texts h1 {
-    @apply desktop:mb-[1rem] text-[2.5rem] laptop:mb-[0.5rem] laptop:text-[2rem] desktop:text-[4rem] font-bold mb-[0.5rem];
+    @apply desktop:mb-[1rem]  text-[2.5rem] laptop:mb-[0.5rem] laptop:text-[2rem] desktop:text-[4rem] font-bold mb-[0.5rem];
 }
 
 .subheading {

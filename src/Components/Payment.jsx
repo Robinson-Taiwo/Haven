@@ -153,7 +153,7 @@ const Payment = () => {
                                 <div className="deets-form  ">
                                     <h4>Expiry Date</h4>
 
-                                    <input maxLength={9} type="text" />
+                                    <input className='bg-[transparent]' maxLength={9} type="text" />
 
                                     <div className="deets-line  w-[4.55rem] "></div>
 
