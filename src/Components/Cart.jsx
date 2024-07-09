@@ -140,7 +140,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                     </div>
 
                     <div className="items-center flex justify-center w-[100%]">
-                        <p className="w-[18.75rem] laptop:text-[0.8rem] laptop:w-[69.87rem] text-[0.55rem] mb-[1rem] pb-[0rem] laptop:mb-[4.44rem] laptop:px-[3rem] text-center  ">
+                        <p className="w-[18.75rem] laptop:text-[0.8rem] laptop:w-[69.87rem] text-[0.55rem] mb-[1rem] pb-[0rem] laptop:mb-[4.44rem] tablet:w-[80%] laptop:px-[3rem] text-center  ">
                             By clicking on “CHECKOUT”, you will be directed to the checkout
                             page where payment will be taken and your order fulfilled using
                             your payment card. Note that we “ONLY” accept valid payment card

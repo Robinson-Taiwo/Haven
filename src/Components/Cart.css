@@ -55,28 +55,28 @@
 }
 
 .cart-card-image {
-  @apply w-[6.4718rem] h-[7.401rem] desktop:w-[23.12rem] desktop:h-[26.44rem] laptop:w-[18.12rem] laptop:h-[21.44rem]
+  @apply w-[6.4718rem] h-[7.401rem] desktop:w-[23.12rem] desktop:h-[26.44rem] laptop:w-[18.12rem] laptop:h-[21.44rem] tablet:h-[12rem] tablet:w-[11rem]
 }
 
 .cart-card-deets h1 {
-  @apply text-[0.83711rem] font-semibold laptop:text-[1.5rem]
+  @apply text-[0.83711rem]  tablet:text-[1.2rem] font-semibold laptop:text-[1.5rem]
 }
 
 .cart-card-deets h3 {
-  @apply text-[0.675rem] font-medium laptop:text-[1.25rem]
+  @apply text-[0.775rem] tablet:text-[1rem] font-medium laptop:text-[1.25rem]
 }
 
 .cart-card-deets h4 {
-  @apply text-[0.612rem] font-medium laptop:text-[1rem]
+  @apply text-[0.712rem] font-medium laptop:text-[1rem] tablet:text-[0.8rem] 
 }
 
 
 .cart-card-deets h5 {
-  @apply text-[0.55rem] font-medium laptop:text-[1rem]
+  @apply text-[0.65rem] tablet:text-[0.9rem]  font-medium laptop:text-[1rem]
 }
 
 .cart-card-deets p {
-  @apply laptop:text-[1rem] text-[0.475rem] text-[#D50000]
+  @apply laptop:text-[1rem] tablet:text-[0.5rem]  text-[0.475rem] text-[#D50000]
 }
 
 
