@@ -36,35 +36,14 @@ const Payment = () => {
 
                 <div className='w-[100%] flex items-center justify-center ' >
 
-                    <div className="checkout-container">
+                    <div className="checkout-container   ">
 
-                        <div className="payment-container">
+                        <div className="payment-container laptop:mb-[0rem] mb-[2rem]">
 
                             <h1 className="Payment-text">Payment</h1>
 
 
-                            {/* <div className="payment-details-container">
-
-
-                                <div className="payment-details-texts">
-
-                                    <h4 className='mt-[1rem]' >Item</h4>
-
-                                    <h4 className='mt-[1rem]' >Amount:</h4>
-
-
-                                </div>
-
-                                <div className="payment-detail-item mb-[0rem] ">
-
-                                    <h4 className='' >Kingsize Bedding and Platform</h4>
-
-                                    <h4>NGN 500,000</h4>
-
-
-                                </div>
-                            </div> */}
-
+                       
 
 
                             <div className="payment-details-texts mb-[4rem]">
@@ -86,7 +65,7 @@ const Payment = () => {
 
 
 
-                            <div className="deets-line w-[100%] laptop:w-[36.4rem] mt-[3rem] mb-[3.37rem]"></div>
+                        <div className="deets-line w-[100%] laptop:w-[36.4rem] mt-[3rem] mb-[3.37rem]"></div>
 
 
 

@@ -8,7 +8,7 @@ import "./ProductCard.css";
 
 const ProductCard = ({ image, size, originalPrice, oldPrice, openCart, setOpenCart }) => {
     return (
-        <div className="ProductCard-container">
+        <div className="ProductCard-container relative  z-10 ">
             <div className="productCard-image relative">
                 <img className="pc-image" src={`./images/${image}.png`} alt="" />
                 <img className="heart-image" src={heart} alt="" />

@@ -80,7 +80,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                                 <div className="card-cart-quantity">
                                     <img src={plus} alt="" />
 
-                                    <p>1</p>
+                                    <p>2</p>
 
                                     <img src={minus} alt="" />
                                 </div>
@@ -96,7 +96,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                         <div className="">
                             <div className="may-like w-[100%] flex justify-center flex-col  ">
                                 <div className="items-center flex justify-center w-[100%]">
-                                    <h1 className="may-like-text text-[0.4975rem] font-semibold laptop:text-[1.5rem]   laptop:mt-[4.31rem] laptop:mb-[3.81rem] mb-[1.07rem]  ">
+                                    <h1 className="may-like-text text-[0.8975rem] font-semibold laptop:text-[1.5rem]   laptop:mt-[4.31rem] laptop:mb-[3.81rem] mb-[1.07rem]  ">
                                         YOU MAY ALSO LIKE
                                     </h1>
                                 </div>
@@ -124,7 +124,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                 </div>
 
                 <div className="cart-fixed  h-fit ">
-                    <div className="subtotal-cart  laptop:pt-[4.44rem] pt-[0.24rem] laptop:px-[5.08rem] px-[1.42rem] flex flex-row justify-between laptop:mb-[4.44rem] mb-[1.47rem] laptop:text-[1.5rem] text-[0.375rem] font-semibold ">
+                    <div className="subtotal-cart  laptop:pt-[4.44rem] pt-[0.24rem] laptop:px-[5.08rem] px-[1.42rem] flex flex-row justify-between laptop:mb-[4.44rem] mb-[1.47rem] laptop:text-[1.5rem] text-[0.775rem] font-semibold ">
                         <p> SUBTOTAL</p>
 
                         <h4>NGN 1,000,000.00</h4>
@@ -133,14 +133,14 @@ const Cart = ({ openCart, setOpenCart }) => {
                     <div className="flex justify-center ">
                         <Link
                             to="/checkout"
-                            className="cart-checkout laptop:px-[5rem] px-[1.4rem] bg-[#434834] text-[white] text-[0.5rem] laptop:py-[0.75rem] laptop:text-[1rem] py-[0.21rem] rounded-[0.17494rem] laptop:mb-[6.31rem] mb-[1.49rem] laptop:rounded-[0.625rem] "
+                            className="cart-checkout laptop:px-[5rem] px-[1.4rem] bg-[#434834] text-[white] text-[0.9rem] laptop:py-[0.75rem] laptop:text-[1rem] py-[0.21rem] rounded-[0.17494rem] laptop:mb-[6.31rem] mb-[1.49rem] laptop:rounded-[0.625rem] "
                         >
                             CHECKOUT
                         </Link>
                     </div>
 
                     <div className="items-center flex justify-center w-[100%]">
-                        <p className="w-[18.75rem] laptop:text-[1rem] laptop:w-[69.87rem] text-[0.25rem] mb-[1rem] pb-[0rem] laptop:mb-[4.44rem] ">
+                        <p className="w-[18.75rem] laptop:text-[0.8rem] laptop:w-[69.87rem] text-[0.55rem] mb-[1rem] pb-[0rem] laptop:mb-[4.44rem] laptop:px-[3rem] text-center  ">
                             By clicking on “CHECKOUT”, you will be directed to the checkout
                             page where payment will be taken and your order fulfilled using
                             your payment card. Note that we “ONLY” accept valid payment card

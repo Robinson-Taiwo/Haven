@@ -7,13 +7,14 @@
     @apply ml-[0.12rem] mb-[2.5rem]
 }
 
+
 .checkout-container {
     border: 1px solid rgba(8, 72, 125, 0.15);
-    @apply bg-[rgb(255,255,255)] laptop:h-[51rem] laptop:w-[77.5rem] laptop:pl-[1.87rem] flex laptop:flex-row flex-col desktop:gap-[5.62rem]  laptop:gap-[3rem]
+    @apply bg-[rgb(255,255,255)] laptop:h-[51rem] laptop:w-[77.5rem] laptop:pl-[1.87rem] flex laptop:flex-row flex-col desktop:gap-[5.62rem] tablet:w-[80%]  laptop:gap-[3rem] w-[95%] 
 }
 
 .payment-container {
-    @apply mt-[1.88rem] laptop:w-[36.4rem] tablet:w-[30rem]  w-[100%] px-[1rem]
+    @apply mt-[1.88rem] laptop:w-[36.4rem]  tablet:w-[100%]  w-[100%] px-[1rem]
 }
 
 .Payment-text {
@@ -206,7 +207,7 @@ input:focus {
 }
 
 .cvc input {
-    @apply w-[3.5rem]
+    @apply w-[3.5rem] bg-transparent
 }
 
 .primary-button-container{
@@ -262,7 +263,7 @@ input:focus {
   }
 
   .cancle{
-    @apply absolute laptop:top-[3.12rem] laptop:right-[3.38rem]  desktop:h-[auto] desktop:w-[auto]  w-[1rem] h-[1rem]  top-[1.41rem] right-[1.52rem]
+    @apply absolute laptop:top-[3.12rem] laptop:right-[3.38rem]  desktop:h-[auto] desktop:w-[auto] laptop:h-[2rem] laptop:w-[2rem]  w-[1rem] h-[1rem]  top-[1.41rem] right-[1.52rem]
   }
   
 .success-icon{
@@ -270,7 +271,7 @@ input:focus {
 }
 
 .success-text{
-    @apply laptop:text-[1.5rem] font-semibold text-[1rem] h-[3rem] leading-[1.5] 
+    @apply laptop:text-[1.2rem] font-semibold text-[1rem] h-[3rem] leading-[1.5] 
 }
 
   .modal-content h2 {
@@ -284,7 +285,6 @@ input:focus {
 
   }
   
-
 
   .overlay-content{
     @apply  w-[13.625rem] pt-[1rem] flex flex-col items-center justify-center

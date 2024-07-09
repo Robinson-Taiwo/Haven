@@ -10,12 +10,12 @@
   justify-content: end;
   align-items: center;
   z-index: 1000;
-  @apply laptop:justify-center desktop:top-[0rem] laptop:pt-[9.75rem]
+  @apply laptop:justify-center desktop:top-[0rem] desktop:pt-[9.75rem]
   /* High z-index to ensure it's above all content */
 }
 
 .cart-content-container {
-  @apply bg-[#FAF5FF] h-[100%] w-[92.255%] laptop:w-[78rem]
+  @apply bg-[#FAF5FF] h-[100%] w-[92.255%] desktop:w-[78rem] laptop:w-[80%]
 }
 
 .cart-content-nav {
@@ -23,7 +23,7 @@
 }
 
 .cart-content-nav {
-  @apply w-[100%] flex flex-row items-center justify-between px-[1.28rem] text-[0.44rem] font-bold laptop:text-[1.5rem] laptop:px-[5.62rem] laptop:pt-[2.25rem] laptop:pb-[2.06rem]
+  @apply w-[100%] flex flex-row items-center justify-between px-[1.28rem] text-[0.44rem] font-bold laptop:text-[1.5rem] laptop:px-[5.62rem] laptop:pt-[3.25rem] laptop:pb-[2.06rem] 
 }
 
 .ccni {
@@ -51,11 +51,11 @@
 }
 
 .cart-card-texts {
-  @apply flex flex-col gap-[1.38rem] laptop:gap-[10rem]
+  @apply flex flex-col gap-[1.38rem] desktop:gap-[10rem] laptop:gap-[3rem]
 }
 
 .cart-card-image {
-  @apply w-[6.4718rem] h-[7.401rem] laptop:w-[23.12rem] laptop:h-[26.44rem]
+  @apply w-[6.4718rem] h-[7.401rem] desktop:w-[23.12rem] desktop:h-[26.44rem] laptop:w-[18.12rem] laptop:h-[21.44rem]
 }
 
 .cart-card-deets h1 {
@@ -87,7 +87,7 @@
   padding: 0.10494rem 0.25113rem 0.105rem 0.25113rem;
   border-radius: 0.16106rem;
 
-  @apply flex flex-row laptop:h-fit laptop:rounded-[0.625rem] laptop:py-[0.375rem] laptop:px-[0.937rem] laptop:gap-[1rem] w-[5rem] h-[2rem]  items-center justify-around
+  @apply flex flex-row laptop:h-fit laptop:rounded-[0.625rem] laptop:py-[0.375rem] laptop:px-[0.937rem] laptop:gap-[1rem] w-[5rem] h-[2rem]  items-center justify-around laptop:w-[10rem] 
 }
 
 .card-cart-quantity img {

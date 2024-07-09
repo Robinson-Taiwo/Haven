@@ -74,14 +74,14 @@ const Checkout = () => {
                                     </div>
 
                                     <div className="two-input-form">
-                                        <div className="one-input-form desktop:w-[19.625rem] laptop:w-[45%]  ">
+                                        <div className="one-input-form desktop:w-[19.625rem] w-[45%] laptop:w-[45%]  ">
                                             <label htmlFor="">First Name*</label>
 
                                             <input type="text" />
 
                                         </div>
 
-                                        <div className="one-input-form desktop:w-[19.625rem] laptop:w-[45%]  ">
+                                        <div className="one-input-form desktop:w-[19.625rem] w-[45%] laptop:w-[45%]  ">
                                             <label htmlFor="">Last Name*</label>
 
                                             <input type="text" />
@@ -107,14 +107,14 @@ const Checkout = () => {
 
 
                                     <div className="two-input-form">
-                                        <div className="one-input-form desktop:w-[19.625rem] laptop:w-[45%] ">
+                                        <div className="one-input-form desktop:w-[19.625rem] w-[45%] laptop:w-[45%] ">
                                             <label htmlFor="">City*</label>
 
                                             <input type="text" />
 
                                         </div>
 
-                                        <div className="one-input-form desktop:w-[19.625rem] laptop:w-[45%] ">
+                                        <div className="one-input-form desktop:w-[19.625rem] w-[45%] laptop:w-[45%] ">
                                             <label htmlFor="">Region*</label>
 
                                             <input type="text" />
@@ -124,14 +124,14 @@ const Checkout = () => {
                                     </div>
 
                                     <div className="two-input-form">
-                                        <div className="one-input-form desktop:w-[19.625rem] laptop:w-[40%] ">
+                                        <div className="one-input-form desktop:w-[19.625rem] w-[40%] laptop:w-[40%] ">
                                             <label htmlFor="">Area Number*</label>
 
                                             <select className='w-[4.06rem]' value="+234" type="text" />
 
                                         </div>
 
-                                        <div className="one-input-form desktop:w-[19.625rem] laptop:w-[45%] w-[34.25rem]'  ">
+                                        <div className="one-input-form desktop:w-[19.625rem] w-[45%] laptop:w-[45%]  ">
                                             <label htmlFor="">Phone Number*</label>
 
                                             <select />
@@ -166,7 +166,7 @@ const Checkout = () => {
 
 
 
-                        <div className="order-container">
+                        <div className="order-container ">
 
 
                             <div className='oc-first-container' >

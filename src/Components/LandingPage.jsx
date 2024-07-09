@@ -18,6 +18,7 @@ import Cart from "./Cart";
 const LandingPage = () => {
     const [activeLink, setActiveLink] = useState("");
     const [openCart, setOpenCart] = useState(false)
+    const [open, setOpen] = useState(false)
 
 
     const options = [
@@ -90,7 +91,7 @@ const LandingPage = () => {
                         <img src={user} alt="" className="navbar-icon" />
                     </Link>
                     <div onClick={() => setOpenCart(!openCart)} >
-                        {console.log(openCart)}
+                        {/* {console.log(openCart)} */}
                         <img src={cart} alt="" className="navbar-icon" />
                     </div>
                 </div>
@@ -121,24 +122,54 @@ const LandingPage = () => {
 
             {/* this is the product page section */}
 
-            <section className="products-lists">
-                <div className="flashSales-container">
-                    <div className="flash-sales-texts">
-                        <span>Flash Sales</span>
-                        <span>23:20:01</span>
+            <section className="products-lists   relative ">
+
+
+
+                <div className="flashSales-cont  z-[100]   absolute ">
+
+                    <div className=" in-co  relative" >
+
+
+
+
+                        <div className="flash-sales-texts laptop:pr-[0rem] pr-[1.56rem] ">
+                            <span>Flash Sales</span>
+                            <span>23:20:01</span>
+                        </div>
+
+
+
+                        <div className="container-dp z-[10]  pr-[1.56rem] flex  laptop:pr-[0rem]  w-[16rem] h-[50vh] laptop:h-[30vh] right-[0]  ">
+                            <button className="dropdown" onClick={() => setOpen(!open)}>
+                                <p> Sort By </p>
+                                <img src={arrowd} alt="" />
+                            </button>
+
+                            {open && (
+                                <div className="dropdown-dp     ">
+                                    <div>Price: Low to High</div>
+                                    <div>Price: High to Low</div>
+                                    <div>Best Sellers</div>
+                                    <div>New Arrivals</div>
+                                </div>
+                            )}
+
+                        </div>
+
                     </div>
 
-
-                    <div className="dropdown">
-
-                        <span>sort by</span>
-                        <span><img src={arrowd} alt="" /></span>
-
-                    </div>
 
                 </div>
-                <div className="product-section">
-                    <div className="product-section-container">
+
+
+
+
+
+
+
+                <div className="product-section ">
+                    <div className="product-section-container ">
                         {data.map((product, index) => (
                             <ProductCard
                                 openCart={openCart}
