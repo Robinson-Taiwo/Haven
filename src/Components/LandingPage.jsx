@@ -106,7 +106,7 @@ const LandingPage = () => {
 
 
                 <div className="hero-texts">
-                    <h1>New Arrivals!!!</h1>
+                    <h1  className="cllk" >New Arrivals!!!</h1>
                     <h3 className="subheading">
                         Sleep like Royalty: Introducing our New Luxury Bed Collection.
                     </h3>

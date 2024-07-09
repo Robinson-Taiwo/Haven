@@ -1,6 +1,6 @@
 .cart-container {
   position: fixed;
-  top: 3.769rem;
+  top: 0.769rem;
   left: 0;
   width: 100%;
   height: 100%;
@@ -22,12 +22,14 @@
   @apply h-[1.71rem] overflow-y-hidden
 }
 
+
+
 .cart-content-nav {
   @apply w-[100%] flex flex-row items-center justify-between px-[1.28rem] text-[0.44rem] font-bold laptop:text-[1.5rem] laptop:px-[5.62rem] laptop:pt-[3.25rem] laptop:pb-[2.06rem] 
 }
 
 .ccni {
-  @apply laptop:h-[1.5rem] laptop:w-[1.5rem]
+  @apply laptop:h-[1.5rem] laptop:w-[1.5rem] h-[1.5rem] w-[1.5rem]
 }
 
 .cart-line {

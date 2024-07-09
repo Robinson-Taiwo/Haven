@@ -39,7 +39,7 @@ const Cart = ({ openCart, setOpenCart }) => {
                     <div className="cart-content-nav">
                         <img className="ccni" src={cart} alt="" />
 
-                        <p>REVIEW YOUR CART</p>
+                        <p className="text-[1rem]  tablet:text-[1.5rem] " >REVIEW YOUR CART</p>
 
                         <img
                             className="ccni"
