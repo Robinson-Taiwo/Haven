@@ -130,7 +130,7 @@
 
 .card-detail-container {
     background: rgba(217, 218, 214, 0.20);
-    @apply laptop:w-[33.56rem] h-fit laptop:pr-[2.19rem] w-[100%] mt-[7rem]  laptop:mt-[0rem]
+    @apply laptop:w-[33.56rem] h-fit laptop:pr-[2.19rem] w-[100%] mt-[7rem]  laptop:mt-[0rem] 
 }
 
 .card-detail-text {

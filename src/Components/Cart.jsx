@@ -93,17 +93,17 @@ const Cart = ({ openCart, setOpenCart }) => {
                      
                         {/* <div className="cart-line w-[100%] mt-[1.96rem] laptop:mt-[7rem] "></div> */}
 
-                        <div className="">
+                        {/* <div className="">
                             <div className="may-like w-[100%] flex justify-center flex-col  ">
                                 <div className="items-center flex justify-center w-[100%]">
-                                    {/* <h1 className="may-like-text text-[0.8975rem] font-semibold laptop:text-[1.5rem]   laptop:mt-[4.31rem] laptop:mb-[3.81rem] mb-[1.07rem]  ">
+                                    <h1 className="may-like-text text-[0.8975rem] font-semibold laptop:text-[1.5rem]   laptop:mt-[4.31rem] laptop:mb-[3.81rem] mb-[0.07rem]  ">
                                         YOU MAY ALSO LIKE
-                                    </h1> */}
+                                    </h1>
                                 </div>
 
                                 <div>
-                                    <div className="product-section pb-[0rem] mb-[0rem] ">
-                                        {/* <div className="product-section-container llop mb-[0rem] ">
+                                    <div className="product-section overflow-y-auto pb-[0rem] mb-[0rem] ">
+                                        <div className="product-section-container flex flex-row    llop mb-[0rem] overflow-y-scroll overfl ">
                                             {products.map((product, index) => (
                                                 <ProductCard
                                                     openCart={openCart}
@@ -115,11 +115,11 @@ const Cart = ({ openCart, setOpenCart }) => {
                                                     oldPrice={product.oldPrice}
                                                 />
                                             ))}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
