@@ -91,9 +91,6 @@ const LandingPage = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -117,6 +114,10 @@ const LandingPage = () => {
         setPostsPerPage(response.data.size);
         setTotalPost(response.data.total);
 
+       
+
+     
+
         // console.log('Total Products:', response.data.total);
       } catch (err) {
         setError(err.message);
@@ -126,6 +127,12 @@ const LandingPage = () => {
 
     fetchProducts();
   }, [currentPage, categoryId]);
+
+   const currentPosts = products.length > 0 ? products.slice(firstPostIndex, lastPostIndex) : [];
+
+  const filteredProducts = products.filter((product) =>
+  product.name.toLowerCase().includes(searchQuery.toLowerCase())
+);
 
   useEffect(() => {
     if (products.length > 0) {
