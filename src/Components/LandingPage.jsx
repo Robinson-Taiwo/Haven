@@ -87,7 +87,7 @@ const LandingPage = () => {
   );
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = products.length > 0 ? products.slice(firstPostIndex, lastPostIndex) : [];
+  // const currentPosts = products.length > 0 ? products.slice(firstPostIndex, lastPostIndex) : [];
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
