@@ -96,7 +96,8 @@ const LandingPage = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("/api/products", {
+        const response = await axios.get(
+          "https://timbu-get-all-products.reavdev.workers.dev/", {
           params: {
             organization_id: "6543fa8ab7f743228e7902f501b5dca6",
             reverse_sort: false,
@@ -106,16 +107,13 @@ const LandingPage = () => {
             Apikey: "0ddf5c22ff2b4d988fabb85eb2bd456e20240712202624623806",
             category_id: categoryId,
           },
-        });
+        }
+        );
+
         setProducts(response.data.items);
-        // console.log(response.data);
-        // console.log(response.data.items)
         setTotalPages(Math.ceil(response.data.total / postsPerPage));
         setPostsPerPage(response.data.size);
-        // setTotalPost(response.data.total);
         setLoading(false);
-
-        // console.log('Total Products:', response.data.total);
       } catch (err) {
         setError(err.message);
         setLoading(false);
@@ -124,6 +122,10 @@ const LandingPage = () => {
 
     fetchProducts();
   }, [currentPage, categoryId]);
+
+
+
+  // https://timbu-get-all-products.reavdev.workers.dev/?organization_id=6543fa8ab7f743228e7902f501b5dca6&reverse_sort=false&page=1&size=12&Appid=W1V4BL5K9FDWO97&Apikey=0ddf5c22ff2b4d988fabb85eb2bd456e20240712202624623806&category_id=5f9d8f0d4c9e4a0004b0e8
 
   const filteredProducts = products && products.length > 0
     ? products.filter((product) =>
