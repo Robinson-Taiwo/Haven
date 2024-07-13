@@ -140,7 +140,7 @@ const LandingPage = () => {
     if (data.length > 0) {
       const uniqueCategoriesMap = new Map();
 
-      products.forEach((item) => {
+      products?.length > 0 && products.forEach((item) => {
         item.categories.forEach((category) => {
           if (!uniqueCategoriesMap.has(category.name)) {
             uniqueCategoriesMap.set(category.name, category.id);
