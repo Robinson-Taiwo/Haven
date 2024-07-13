@@ -137,7 +137,7 @@ const LandingPage = () => {
   // );
 
   useEffect(() => {
-    if (products.length > 0) {
+    if (data.length > 0) {
       const uniqueCategoriesMap = new Map();
 
       products.forEach((item) => {
