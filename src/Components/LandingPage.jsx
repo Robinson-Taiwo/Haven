@@ -78,7 +78,7 @@ const LandingPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(12);
   const [totalPages, setTotalPages] = useState(0); // Op
-  const [totalpost, setTotalPost] = useState(0); // Op
+  const [totalpost, setTotalPost] = useState(20); // Op
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState([]);
@@ -111,7 +111,7 @@ const LandingPage = () => {
         // console.log(response.data.items)
         setTotalPages(Math.ceil(response.data.total / postsPerPage));
         setPostsPerPage(response.data.size);
-        setTotalPost(response.data.total);
+        // setTotalPost(response.data.total);
         setLoading(false);
 
 
@@ -337,7 +337,7 @@ const LandingPage = () => {
                 <p>Loading products...</p>
               ) : (
                 <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
-                  {/* {products.map((product, index) => (
+                  {products.map((product, index) => (
                     <ProductCard
                       openCart={openCart}
                       setOpenCart={setOpenCart}
@@ -347,7 +347,7 @@ const LandingPage = () => {
                       originalPrice={products[0].current_price[0]?.NGN[0]}
                       oldPrice={product.oldPrice}
                     />
-                  ))} */}
+                  ))}
                 </div>
               )}
 
