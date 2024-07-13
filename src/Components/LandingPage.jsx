@@ -80,7 +80,7 @@ const LandingPage = () => {
   const [totalPages, setTotalPages] = useState(0); // Op
   const [totalpost, setTotalPost] = useState(0); // Op
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState("");
+  const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState(
     "d4614b8ddc2f493cb63ffa75f29e799b"
@@ -106,8 +106,8 @@ const LandingPage = () => {
             category_id: categoryId,
           },
         });
-        setProducts(response.data.items);
         setLoading(false);
+        setProducts(response.data.items);
         // console.log(response.data);
         // console.log(response.data.items)
         setTotalPages(Math.ceil(response.data.total / postsPerPage));
@@ -172,192 +172,206 @@ const LandingPage = () => {
   // const uniqueCategories = [...new Set(products.items.flatMap(item => item.categories.map(cat => cat.name)))].slice(0, 3);
 
   return (
-    <div className={` ${openCart ? "opc " : ""}`}>
-      {/* this is the navbar container for navigation */}
-      <nav className="navbar-container">
-        <div className="navbar-links">
-          {navItems.map((item, index) => (
-            <h5 key={index}>
-              <button
-                className={`navbar-link ${activeLink === item ? "active" : ""}`}
-                onClick={() => handleClick(item)}
+    <>
+
+      {loading ? "loading website" : (
+
+        <div className={` ${openCart ? "opc " : ""}`}>
+          {/* this is the navbar container for navigation */}
+          <nav className="navbar-container">
+            <div className="navbar-links">
+              {navItems.map((item, index) => (
+                <h5 key={index}>
+                  <button
+                    className={`navbar-link ${activeLink === item ? "active" : ""}`}
+                    onClick={() => handleClick(item)}
+                  >
+                    {item}
+                  </button>
+                </h5>
+              ))}
+            </div>
+
+            <img src={menu} alt="" className="hambugar" />
+
+            <div className="logo">
+              <img src={logo} className="navbar-logo" alt="logo" />
+            </div>
+
+            <div className={showSearch ? "show-searchbg" : "hide-searchbg"}>
+              <div className="div-search flex flex-row w-[100%] items-center justify-evenly ">
+                <input
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  type="text"
+                  className={showSearch ? "show-search" : "hide-search"}
+                />
+
+                <img
+                  src={close}
+                  onClick={() => {
+                    setShowSearch(!showSearch);
+                    setSearchQuery("");
+                  }}
+                  className="navbar-logo h-[2rem] w-[3rem] mr-[1rem]   "
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="navbar-icons">
+              <img
+                src={search}
+                onClick={() => setShowSearch(!showSearch)}
+                alt=""
+                className="navbar-icon"
+              />
+
+              <Link to="/user">
+                <img src={user} alt="" className="navbar-icon" />
+              </Link>
+              {/* <div className="red-dot"></div> */}
+
+              <div
+                className="relative flex flex-col h-[fit] w-[fit]"
+                onClick={() => setOpenCart(!openCart)}
               >
-                {item}
-              </button>
-            </h5>
-          ))}
-        </div>
+                <img src={cart} alt="" className="navbar-icon" />
+              </div>
+            </div>
+          </nav>
 
-        <img src={menu} alt="" className="hambugar" />
+          {/*     Landing Page Hero Sction */}
+          <section className={`hero-section relative ${openCart ? "" : ""}`}>
+            {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart} />}
 
-        <div className="logo">
-          <img src={logo} className="navbar-logo" alt="logo" />
-        </div>
-
-        <div className={showSearch ? "show-searchbg" : "hide-searchbg"}>
-          <div className="div-search flex flex-row w-[100%] items-center justify-evenly ">
-            <input
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              type="text"
-              className={showSearch ? "show-search" : "hide-search"}
-            />
-
-            <img
-              src={close}
-              onClick={() => {
-                setShowSearch(!showSearch);
-                setSearchQuery("");
-              }}
-              className="navbar-logo h-[2rem] w-[3rem] mr-[1rem]   "
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div className="navbar-icons">
-          <img
-            src={search}
-            onClick={() => setShowSearch(!showSearch)}
-            alt=""
-            className="navbar-icon"
-          />
-
-          <Link to="/user">
-            <img src={user} alt="" className="navbar-icon" />
-          </Link>
-          {/* <div className="red-dot"></div> */}
-
-          <div
-            className="relative flex flex-col h-[fit] w-[fit]"
-            onClick={() => setOpenCart(!openCart)}
-          >
-            <img src={cart} alt="" className="navbar-icon" />
-          </div>
-        </div>
-      </nav>
-
-      {/*     Landing Page Hero Sction */}
-      <section className={`hero-section relative ${openCart ? "" : ""}`}>
-        {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart} />}
-
-        {searchQuery !== "" && (
-          <div
-            className={
-              searchQuery !== ""
-                ? "search-result top-[0] w-[100%] z-[10000] absolute  bg-white "
-                : "hide-drawer"
-            }
-          >
-            {filteredProducts.map((product) => (
-              <ul
-                className=" search-lists  flex flex-col  px-[1rem] "
-                key={product.id}
-              >
-                <li className=" ">{product.name}</li>
-              </ul>
-            ))}
-          </div>
-        )}
-
-        <div className="hero-texts">
-          <h1 className="cllk">New Arrivals!!!</h1>
-          <h3 className="subheading">
-            Sleep like Royalty: Introducing our New Luxury Bed Collection.
-          </h3>
-
-          <p className="mimi-text">
-            Limited-time offer!! Shop our new bed arrivals and enjoy 15% off
-            your first purchase.
-          </p>
-
-          <button className="shopNow">Shop now</button>
-        </div>
-      </section>
-
-      {/* this is the product page section */}
-
-      <section className="products-lists  flex items-center justify-center flex-col  relative ">
-        <div className="dropdown-container desktop:w-[81rem] flex items-end  flex-col laptop:flex-row w-[100%] tablet:w-[90%] laptop:items-center laptop:justify-between h-fit  laptop:h-[3rem] ">
-          <div className="flash-sales-texts w-fit justify-end  laptop:justify-center flex laptop:pr-[0rem]  ">
-            <span>Flash Sales</span>
-            <span>
-              {" "}
-              {formatTime(time.hours)}:{formatTime(time.minutes)}:
-              {formatTime(time.seconds)}
-            </span>
-          </div>
-
-          <div className="container-dpo w-fit justify-end  relative ">
-            <button
-              className="dropdown h-[2.5rem] text-[0.875rem] laptop:text-[1rem] laptop:h-[100%] "
-              onClick={() => setOpen(!open)}
-            >
-              <p> {selectedOption} </p>
-              {open ? (
-                <img src={arrowd} alt="" />
-              ) : (
-                <img src={arrowup} alt="" />
-              )}
-            </button>
-
-            {open && (
-              <div className="dropdown-dp0  pt-[0.88rem] pb-[0.81rem] pl-[0.94rem] pr-[1rem] w-[11.81rem] right-0  top-[3rem] laptop:w-[100%]  z-[100] absolute laptop:top-[4rem] ">
-                {
-                  // uniqueCategories
-                  categories.map((item, index) => (
-                    <React.Fragment key={index}>
-                      <button
-                        onClick={() => {
-                          setCategoryId(item.id);
-                          setSelectedOption(item.name);
-                          setOpen(!open);
-                        }}
-                      >
-                        {item.name}
-                      </button>
-                      {index < options.length - 1 && (
-                        <div className="black-line"></div>
-                      )}
-                    </React.Fragment>
-                  ))
+            {searchQuery !== "" && (
+              <div
+                className={
+                  searchQuery !== ""
+                    ? "search-result top-[0] w-[100%] z-[10000] absolute  bg-white "
+                    : "hide-drawer"
                 }
+              >
+                {filteredProducts.map((product) => (
+                  <ul
+                    className=" search-lists  flex flex-col  px-[1rem] "
+                    key={product.id}
+                  >
+                    <li className=" ">{product.name}</li>
+                  </ul>
+                ))}
               </div>
             )}
-          </div>
+
+            <div className="hero-texts">
+              <h1 className="cllk">New Arrivals!!!</h1>
+              <h3 className="subheading">
+                Sleep like Royalty: Introducing our New Luxury Bed Collection.
+              </h3>
+
+              <p className="mimi-text">
+                Limited-time offer!! Shop our new bed arrivals and enjoy 15% off
+                your first purchase.
+              </p>
+
+              <button className="shopNow">Shop now</button>
+            </div>
+          </section>
+
+          {/* this is the product page section */}
+
+          <section className="products-lists  flex items-center justify-center flex-col  relative ">
+            <div className="dropdown-container desktop:w-[81rem] flex items-end  flex-col laptop:flex-row w-[100%] tablet:w-[90%] laptop:items-center laptop:justify-between h-fit  laptop:h-[3rem] ">
+              <div className="flash-sales-texts w-fit justify-end  laptop:justify-center flex laptop:pr-[0rem]  ">
+                <span>Flash Sales</span>
+                <span>
+                  {" "}
+                  {formatTime(time.hours)}:{formatTime(time.minutes)}:
+                  {formatTime(time.seconds)}
+                </span>
+              </div>
+
+              <div className="container-dpo w-fit justify-end  relative ">
+                <button
+                  className="dropdown h-[2.5rem] text-[0.875rem] laptop:text-[1rem] laptop:h-[100%] "
+                  onClick={() => setOpen(!open)}
+                >
+                  <p> {selectedOption} </p>
+                  {open ? (
+                    <img src={arrowd} alt="" />
+                  ) : (
+                    <img src={arrowup} alt="" />
+                  )}
+                </button>
+
+                {open && (
+                  <div className="dropdown-dp0  pt-[0.88rem] pb-[0.81rem] pl-[0.94rem] pr-[1rem] w-[11.81rem] right-0  top-[3rem] laptop:w-[100%]  z-[100] absolute laptop:top-[4rem] ">
+                    {
+                      // uniqueCategories
+                      categories.map((item, index) => (
+                        <React.Fragment key={index}>
+                          <button
+                            onClick={() => {
+                              setCategoryId(item.id);
+                              setSelectedOption(item.name);
+                              setOpen(!open);
+                            }}
+                          >
+                            {item.name}
+                          </button>
+                          {index < options.length - 1 && (
+                            <div className="black-line"></div>
+                          )}
+                        </React.Fragment>
+                      ))
+                    }
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="product-section ">
+              <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
+                {products.map((product, index) => (
+                  <ProductCard
+                    openCart={openCart}
+                    setOpenCart={setOpenCart}
+                    key={index}
+                    image={product.photos[0].url}
+                    size={product.name}
+                    originalPrice={products[0].current_price[0]?.NGN[0]}
+                    oldPrice={product.oldPrice}
+                  />
+                ))}
+              </div>
+
+              <div className="load-more">
+                <Pagination
+                  totalPosts={totalpost}
+                  postsPerPage={postsPerPage}
+                  setCurrentPage={setCurrentPage}
+                  currentPage={currentPage}
+                />
+              </div>
+            </div>
+          </section>
+
+          <>
+            <Footer />
+          </>
         </div>
 
-        <div className="product-section ">
-          <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
-            {products.map((product, index) => (
-              <ProductCard
-                openCart={openCart}
-                setOpenCart={setOpenCart}
-                key={index}
-                image={product.photos[0].url}
-                size={product.name}
-                originalPrice={products[0].current_price[0]?.NGN[0]}
-                oldPrice={product.oldPrice}
-              />
-            ))}
-          </div>
+      )}
 
-          <div className="load-more">
-            <Pagination
-              totalPosts={totalpost}
-              postsPerPage={postsPerPage}
-              setCurrentPage={setCurrentPage}
-              currentPage={currentPage}
-            />
-          </div>
-        </div>
-      </section>
 
-      <>
-        <Footer />
-      </>
-    </div>
+
+
+
+
+
+    </>
   );
 };
 
