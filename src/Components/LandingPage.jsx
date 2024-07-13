@@ -106,13 +106,13 @@ const LandingPage = () => {
             category_id: categoryId,
           },
         });
-        setLoading(false);
         setProducts(response.data.items);
         // console.log(response.data);
         // console.log(response.data.items)
         setTotalPages(Math.ceil(response.data.total / postsPerPage));
         setPostsPerPage(response.data.size);
         setTotalPost(response.data.total);
+        setLoading(false);
 
 
 
