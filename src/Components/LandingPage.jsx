@@ -95,6 +95,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        setLoading(true);
         const response = await axios.get("/api/products", {
           params: {
             organization_id: "6543fa8ab7f743228e7902f501b5dca6",
@@ -113,10 +114,6 @@ const LandingPage = () => {
         setPostsPerPage(response.data.size);
         // setTotalPost(response.data.total);
         setLoading(false);
-
-
-
-
 
         // console.log('Total Products:', response.data.total);
       } catch (err) {
@@ -342,7 +339,7 @@ const LandingPage = () => {
                       openCart={openCart}
                       setOpenCart={setOpenCart}
                       key={index}
-                      image={product.photos[0].url}
+                      image={product.photos[0]?.url}
                       size={product.name}
                       originalPrice={products[0].current_price[0]?.NGN[0]}
                       oldPrice={product.oldPrice}
