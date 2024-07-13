@@ -1,0 +1,285 @@
+.navbar-container {
+    @apply w-[100vw] px-[1rem] py-[0.5rem] laptop:px-[4.44rem] laptop:pt-[2rem] laptop:py-[1.04rem] justify-between flex flex-row overflow-x-hidden relative;
+}
+
+.navbar-links {
+    @apply flex flex-row gap-[5rem] text-[#000] font-semibold leading-normal items-center justify-center;
+}
+
+.navbar-links {
+    @apply hidden laptop:flex;
+}
+
+.hambugar {
+    @apply laptop:hidden;
+}
+
+.navbar-link.active {
+    border-bottom: 0.125rem solid black;
+}
+
+.navbar-icons :nth-child(2) {
+    @apply hidden laptop:flex;
+}
+
+.red-dot {
+    @apply flex justify-center items-center bg-[red] rounded-[50%] h-[0.7rem] w-[0.7rem] text-[0.8rem] absolute top-[1.75rem] right-[0.8rem] laptop:right-[4.2rem] laptop:top-[3.2rem];
+}
+
+.navbar-icons {
+    @apply flex flex-row gap-[1rem] laptop:gap-[1.5rem] items-center justify-center relative;
+}
+
+.show-searchbg {
+    @apply w-[100%] min-h-[100%] absolute top-[0] left-[0] z-[20] bg-[white] flex flex-col pt-[1rem];
+}
+
+.hide-searchbg {
+    @apply left-[-100] absolute hidden;
+}
+
+.search-result {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition: 1s ease-in-out;
+}
+
+.hide-drawer {
+    @apply top-[-100%];
+}
+
+.search-lists {
+    @apply flex flex-col gap-[0rem] overflow-scroll;
+}
+
+.search-lists li {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    @apply h-[3.5rem] flex items-center;
+}
+
+.show-search {
+    border: 0.5px solid rgb(9, 8, 8);
+    transition: 1s ease-in-out;
+
+    @apply w-[80%] h-[60%] top-[1.5rem] left-[0] z-[1] rounded-3xl p-[1rem];
+}
+
+.hide-search {
+    @apply left-[-100%] relative;
+}
+
+.hero-section {
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(0, 0, 0, 0.25) 100%),
+        url(../assets/images/hero-background.png) lightgray 50%;
+    @apply bg-no-repeat bg-cover bg-center w-[100%] overflow-x-hidden laptop:h-[33.125rem] laptop:pt-[10.38rem] laptop:pl-[4.5rem] tablet:h-[25rem] h-[18rem];
+}
+
+/* styles for screens narrower than 768px */
+@media (max-width: 768px) {
+    .hero-section {
+        @apply flex items-center justify-center overflow-x-hidden w-[100vw];
+    }
+
+    .hero-texts {
+        @apply flex items-center flex-col justify-center text-center;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+        @apply flex items-center px-[4rem] overflow-x-hidden w-[100vw];
+    }
+
+    .hero-texts {
+        @apply flex items-start flex-col justify-center text-start;
+    }
+}
+
+
+.hero-texts {
+    @apply flex flex-col text-[#ffffff];
+}
+
+.hero-texts h1 {
+    @apply desktop:mb-[1rem] tablet:text-[3rem] text-[2.5rem] laptop:mb-[0.5rem] laptop:text-[2rem] desktop:text-[4rem] font-bold mb-[0.5rem];
+}
+
+.subheading {
+    @apply laptop:w-[26.25rem] w-[17.5rem] laptop:text-[1.5rem] mt-[0.5rem] font-semibold text-[1rem];
+}
+
+.mimi-text {
+    @apply laptop:w-[26.25rem] w-[17.5rem] text-[0.625rem] mb-[0.93rem] laptop:text-[0.93rem] font-medium laptop:mb-[1.5rem];
+}
+
+.shopNow {
+    border-radius: 0.625rem;
+    border: 1.5px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    @apply text-[black] laptop:w-[7.44rem] laptop:text-[1rem] text-[0.875rem] w-[6.875rem] h-[2.75rem] laptop:h-fit laptop:px-[1.5rem] laptop:py-[0.75rem];
+}
+
+.products-lists {
+    @apply laptop:px-[5%] overflow-x-hidden px-[1.56rem] pt-[2.13rem] laptop:pt-[3.38rem];
+}
+
+.flashSales-container {
+    @apply flex flex-col h-[5.43rem] laptop:flex-row desktop:h-[3rem] laptop:justify-between mb-[3.81rem] items-end;
+}
+
+.flash-sales-texts {
+    @apply flex laptop:flex-row gap-[0.5rem] font-semibold mb-[1rem] laptop:mb-[0rem] laptop:text-[1rem] text-[0.875rem] overflow-y-hidden flex-col;
+}
+
+.flash-sales-texts span {
+    @apply overflow-y-hidden;
+}
+
+h1,
+p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.flashSales-cont {
+    @apply flex flex-row w-[92.5%] justify-between relative;
+}
+
+.dropdown-dp0 {
+    border-radius: 0.3125rem;
+    @apply bg-white;
+}
+
+.black-line {
+    /* width: 115%; */
+    height: 0.0625rem;
+    background: #000;
+    @apply relative left-[-1rem] laptop:w-[115%] w-[118%];
+}
+
+.dropdown-dp0 button {
+    @apply pt-[1.31rem] pb-[0.5rem] bg-[white] w-[100%] flex justify-start laptop:text-[1rem] text-[0.875rem];
+}
+
+.dropdown-dp0 {
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-dp0 button:nth-child(1) {
+    border-top: none;
+    @apply pt-[0rem] pb-[1.09rem];
+}
+
+.dropdown-dp0 button:nth-child(4) {
+    border-top: none;
+    @apply pb-[0rem];
+}
+
+/* border-radius: 0.3125rem;
+ */
+
+.in-co {
+    @apply relative flex laptop:flex-row justify-between w-[92.2%] flex-col items-end laptop:items-start;
+}
+
+.container-dp {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    /* width: 240px; */
+}
+
+.dropdown {
+    display: flex;
+    padding: 0.875rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.625rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    background: rgba(225, 230, 234, 0.08);
+    @apply laptop:w-[15.5rem] w-[11.81rem] overflow-y-hidden bg-white text-[#424242] ml-[3rem] laptop:ml-[0rem];
+}
+
+.dropdown-dp {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    /* height: fit-content; */
+    display: flex;
+    background: white;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    transition: 0.75s ease-in;
+    @apply laptop:w-[249px] w-[11.81rem] rounded-[0.625rem] py-[1rem] h-[13.5rem] flex justify-end laptop:ml-[0rem] ml-[3rem];
+}
+
+.dropdown-dp div {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+    @apply border-t-[1px] w-[100%] flex justify-center h-[100%] pt-[1rem];
+}
+
+/* ------------------------------------------------------------------------- */
+
+.opc {
+    @apply overflow-hidden overflow-y-hidden h-[100vh];
+}
+
+.custom-select option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.custom-select:hover {
+    background-color: #e0e0e0;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+option {
+    @apply px-[0.5rem] py-[2rem] h-[3rem];
+}
+
+.text-select {
+    border: none;
+    appearance: none;
+}
+
+/* ---------------------------------------------------------------- */
+
+.product-section {
+    @apply w-[100%] mt-[3rem] laptop:mt-[0rem] flex items-center justify-center flex-col;
+}
+
+.product-section-container {
+    @apply grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-2 desktop:w-[81rem] desktop:grid-cols-3 laptop:gap-y-[13rem] gap-y-[1.53rem] gap-x-[1.12rem] desktop:gap-x-[1.62rem] place-content-evenly place-items-center laptop:mt-[7rem];
+}
+
+.load-more {
+    @apply laptop:mt-[7rem] mt-[5rem] w-[100%] flex items-center justify-center;
+}
+
+.load-more button {
+    display: inline-flex;
+    padding: 0.75rem 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    @apply mb-[6.41rem] laptop:mb-[11.44rem];
+}
+

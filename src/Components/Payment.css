@@ -1,0 +1,295 @@
+.checkout-page {
+    /* padding-bottom: 6rem; */
+    @apply pt-[1.34rem]  laptop:px-[3rem] desktop:px-[6.25rem] px-[1rem] h-[100vh] w-[100vw]
+}
+
+.checkout-back {
+    @apply ml-[0.12rem] mb-[2.5rem]
+}
+
+
+.checkout-container {
+    border: 1px solid rgba(8, 72, 125, 0.15);
+    @apply bg-[rgb(255,255,255)] laptop:h-[51rem] laptop:w-[77.5rem] laptop:pl-[1.87rem] flex laptop:flex-row flex-col desktop:gap-[5.62rem] tablet:w-[80%]  laptop:gap-[3rem] w-[95%] 
+}
+
+.payment-container {
+    @apply mt-[1.88rem] laptop:w-[36.4rem]  tablet:w-[100%]  w-[100%] px-[1rem]
+}
+
+.Payment-text {
+    @apply laptop:text-[2.25rem] font-semibold mb-[5.75rem] text-[1.2rem]
+}
+
+
+.payment-details-texts {
+    @apply flex flex-row justify-between
+}
+
+.payment-details-texts h3{
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]  w-[8rem] desktop:w-[11.7rem] laptop:mt-[1rem] font-semibold laptop:w-[11rem] text-[0.8rem] items-center justify-center flex 
+}
+
+.payment-details-texts h4{
+    @apply  desktop:text-[1.5rem] laptop:text-[1.2rem]  w-fit flex items-center   text-[0.8rem] justify-center tablet:text-[1.1rem]
+}
+
+
+.payment-detail-item h4 {
+    @apply desktop:text-[1.5rem] desktop:w-[12.37rem] laptop:text-[1.2rem] font-semibold w-fit tablet:text-[1.1rem]
+}
+
+
+.payment-detail-item {
+    @apply flex flex-col gap-[3.38rem] 
+}
+
+
+.payment-details-container {
+    @apply flex flex-row justify-between
+}
+
+
+.item-containerr{
+    @apply flex flex-row justify-between laptop:mb-[12rem] items-center mb-[6rem]
+}
+
+.item-containerr p{
+    @apply desktop:text-[1.5rem] laptop:text-[1.2rem]
+}
+
+.checkbox{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.checkbox:checked{
+    @apply bg-red-400
+}
+
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Checkmark container */
+.custom-checkbox .checkmark {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.50);  /* Border color */
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    border-radius: 4px;  /* Add border radius for rounded corners */
+
+}
+
+/* Custom check mark (tiny) */
+.custom-checkbox .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 7px;  /* Adjust position for 24px size */
+    top: 4px;   /* Adjust position for 24px size */
+    width: 6px; /* Adjust size for 24px size */
+    height: 12px; /* Adjust size for 24px size */
+    border: solid #000;  /* Check mark color */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Show the check mark when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+
+/* Remove the default blue background */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: transparent;
+}
+
+
+
+
+.remember-card {
+    @apply flex flex-row gap-[1.5rem] font-normal items-center justify-center w-[13.5rem] laptop:text-[1rem] text-[0.75rem]
+}
+
+.amount-to-pay {
+    @apply laptop:text-[2rem] font-normal text-[0.9rem]
+}
+
+.card-detail-container {
+    background: rgba(217, 218, 214, 0.20);
+    @apply laptop:w-[33.56rem] h-fit laptop:pr-[2.19rem] w-[100%] mt-[7rem]  laptop:mt-[0rem] 
+}
+
+.card-detail-text {
+    @apply desktop:text-[2rem] leading-normal font-semibold mt-[2.06rem] ml-[0.94rem] mb-[6rem] text-[1.2rem]
+}
+
+
+.card-form {
+    /* background: rgba(67, 72, 52, 0.08); */
+
+    @apply laptop:ml-[0.63rem] laptop:pl-[0.62rem] laptop:mr-[1.12rem] flex flex-col w-[100%] gap-[2.25rem] mb-[2.5rem] pt-[0.62rem]  px-[1rem] laptop:px-[0rem]
+}
+
+.card-input {
+    @apply flex flex-col
+}
+
+.input-line {
+    border-top: none;
+    background: transparent;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.50);
+    @apply h-[2.25rem] text-[1.5rem] laptop:mb-[0.5rem] pb-[1rem] laptop:w-[27.9rem] 
+}
+
+input:focus {
+    outline: none;
+
+}
+
+.card-input-line {
+    border-top: none;
+    background: transparent;
+    border-bottom: none;
+    @apply h-[1.81rem] laptop:text-[1.5rem] laptop:w-[27.9rem] mb-[1rem] pb-[0rem] laptop:font-semibold laptop:pl-[0.1rem] overflow-y-hidden text-[1rem] w-[100%] font-medium
+}
+
+
+.card-input label {
+    @apply laptop:text-[1.25rem] font-normal mb-[2.25rem] text-[0.9rem]
+}
+
+.card-number-line {
+    background: rgba(0, 0, 0, 0.50);
+    @apply laptop:w-[28.1rem] h-[0.062rem] mb-[0.5rem] w-[100%] 
+}
+
+.master-card-input {
+    @apply flex flex-row desktop:gap-[4.5rem]  laptop:gap-[0rem] h-fit
+}
+
+.master-card-icon {
+    @apply h-[1.81rem]
+}
+
+.card-deets-container {
+    @apply px-[1rem] py-[0.5rem] flex flex-row desktop:gap-[8rem]  laptop:gap-[5rem] h-[100%] justify-between
+}
+
+.deets-line {
+    background: rgba(0, 0, 0, 0.50);
+    @apply w-[9.875rem] h-[0.062rem]
+}
+
+.deets-form {
+    @apply flex flex-col laptop:max-w-[9rem] max-w-fit items-center laptop:items-start 
+}
+
+.deets-form h4 {
+    @apply mb-[2rem] laptop:text-[1.25rem] font-normal w-[9rem] items-center flex justify-center  text-[0.9rem]
+}
+
+.deets-form input {
+    @apply mb-[1rem] w-[8rem] border-none h-[1.81rem] laptop:text-[1.5rem] laptop:font-semibold 
+}
+
+.cvc input {
+    @apply w-[3.5rem] bg-transparent
+}
+
+.primary-button-container{
+    @apply w-[100%] justify-center items-center flex mb-[3rem] laptop:mb-[0rem]
+}
+
+.primary-button{
+    @apply  px-[0.625rem] flex items-center justify-center rounded-[0.625rem] bg-[#434834] text-[#f4f4f4] font-medium text-[1rem] w-[12.31rem] h-[3rem]
+}
+
+.success-modal{
+    @apply absolute z-30 h-[100vh] w-[100vw]
+}
+
+
+
+
+
+/* App container */
+.App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to ensure it's above all content */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 45rem;
+    /* width: 45rem;
+    height: 32rem; */
+    border-radius: 1.5625rem; 
+    @apply relative flex items-center justify-center flex-col laptop:w-[45rem] laptop:h-[32rem]  h-[14.437rem] w-[20rem]  tablet:h-[22.437rem] tablet:w-[28rem]
+
+  }
+
+  .cancle{
+    @apply absolute laptop:top-[3.12rem] laptop:right-[3.38rem]  desktop:h-[auto] desktop:w-[auto] laptop:h-[2rem] laptop:w-[2rem]  w-[1rem] h-[1rem]  top-[1.41rem] right-[1.52rem]
+  }
+  
+.success-icon{
+    @apply laptop:mb-[4rem] mb-[1.8rem] 
+}
+
+.success-text{
+    @apply laptop:text-[1.2rem] font-semibold text-[1rem] h-[3rem] leading-[1.5] 
+}
+
+  .modal-content h2 {
+    margin-bottom: 10px;
+    @apply overflow-y-hidden
+  }
+  
+  .modal-content p {
+    margin-bottom: 20px;
+    @apply overflow-y-hidden
+
+  }
+  
+
+  .overlay-content{
+    @apply  w-[13.625rem] pt-[1rem] flex flex-col items-center justify-center
+  }
+
+  .bth{
+    @apply font-medium text-[#424242] laptop:mt-[1.5rem]  mt-[1rem] h-[3rem]
+  }

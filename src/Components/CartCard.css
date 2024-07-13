@@ -1,0 +1,27 @@
+.cart-card-button {
+    border-radius: 0.26106rem;
+    border: 0.258px solid rgba(0, 0, 0, 0.50);
+    @apply laptop:rounded-[0.625rem]
+
+}
+
+.pc-images {
+    @apply w-[6.4718rem] h-[7.401rem] desktop:w-[23.12rem] desktop:h-[26.44rem] laptop:w-[18.12rem] laptop:h-[21.44rem] tablet:h-[12rem] tablet:w-[11rem]
+}
+
+
+.productCard-image {
+    @apply flex items-center justify-center
+}
+
+.cart-card-name {
+    @apply text-[0.8rem] laptop:text-[1.25rem] desktop:text-[1.5rem] 
+}
+
+.cart-card-size {
+    @apply text-[0.7rem] desktop:text-[1.25rem] laptop:text-[1rem]
+}
+
+.cart-card-price {
+    @apply text-[0.6rem] desktop:text-[1rem] laptop:text-[0.98rem]
+}
