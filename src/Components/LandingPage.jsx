@@ -128,7 +128,7 @@ const LandingPage = () => {
     fetchProducts();
   }, [currentPage, categoryId]);
 
-   const currentPosts = products.length > 0 ? products.slice(firstPostIndex, lastPostIndex) : [];
+   
 
   const filteredProducts = products.filter((product) =>
   product.name.toLowerCase().includes(searchQuery.toLowerCase())
