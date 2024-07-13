@@ -337,7 +337,7 @@ const LandingPage = () => {
                 <p>Loading products...</p>
               ) : (
                 <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
-                  {products.map((product, index) => (
+                  {/* {products.map((product, index) => (
                     <ProductCard
                       openCart={openCart}
                       setOpenCart={setOpenCart}
@@ -347,7 +347,7 @@ const LandingPage = () => {
                       originalPrice={products[0].current_price[0]?.NGN[0]}
                       oldPrice={product.oldPrice}
                     />
-                  ))}
+                  ))} */}
                 </div>
               )}
 
