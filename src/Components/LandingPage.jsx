@@ -114,9 +114,9 @@ const LandingPage = () => {
         setPostsPerPage(response.data.size);
         setTotalPost(response.data.total);
 
-       
 
-     
+
+
 
         // console.log('Total Products:', response.data.total);
       } catch (err) {
@@ -128,11 +128,16 @@ const LandingPage = () => {
     fetchProducts();
   }, [currentPage, categoryId]);
 
-   
+  const filteredProducts = products && products.length > 0
+    ? products.filter((product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    : [];
 
-  const filteredProducts = products.filter((product) =>
-  product.name.toLowerCase().includes(searchQuery.toLowerCase())
-);
+
+  //   const filteredProducts = products.filter((product) =>
+  //   product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   useEffect(() => {
     if (products.length > 0) {
