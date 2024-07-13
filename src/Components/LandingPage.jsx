@@ -333,19 +333,25 @@ const LandingPage = () => {
             </div>
 
             <div className="product-section ">
-              <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
-                {products.map((product, index) => (
-                  <ProductCard
-                    openCart={openCart}
-                    setOpenCart={setOpenCart}
-                    key={index}
-                    image={product.photos[0].url}
-                    size={product.name}
-                    originalPrice={products[0].current_price[0]?.NGN[0]}
-                    oldPrice={product.oldPrice}
-                  />
-                ))}
-              </div>
+              {loading ? (
+                <p>Loading products...</p>
+              ) : (
+                <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
+                  {products.map((product, index) => (
+                    <ProductCard
+                      openCart={openCart}
+                      setOpenCart={setOpenCart}
+                      key={index}
+                      image={product.photos[0].url}
+                      size={product.name}
+                      originalPrice={products[0].current_price[0]?.NGN[0]}
+                      oldPrice={product.oldPrice}
+                    />
+                  ))}
+                </div>
+              )}
+
+
 
               <div className="load-more">
                 <Pagination
