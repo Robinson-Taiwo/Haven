@@ -113,6 +113,7 @@ const LandingPage = () => {
 
         setProducts(response.data.items);
         setTotalPages(Math.ceil(response.data.total / postsPerPage));
+        setTotalPost(response.data.total);
         setPostsPerPage(response.data.size);
         setLoading(false);
       } catch (err) {
@@ -345,8 +346,8 @@ const LandingPage = () => {
                       key={index}
                       image={product.photos[0]?.url}
                       size={product.name}
-                      originalPrice={products[0].current_price[0]?.NGN[0]}
-                      oldPrice={product.oldPrice}
+                      originalPrice={product.current_price?.[0]?.NGN?.[0]}
+                      oldPrice={"400000"}
                       product={product}
                     />
                   ))}

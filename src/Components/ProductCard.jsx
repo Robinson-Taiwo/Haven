@@ -66,7 +66,7 @@ const ProductCard = ({
         </div>
         <s className="old-price">NGN {oldPrice}</s>
 
-{console.log(oldPrice)}
+{console.log(product)}
 
       </Link>
 
