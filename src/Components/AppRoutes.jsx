@@ -7,6 +7,7 @@ import Signup from './Signup'
 // import Checkout from './Checkout'
 import Payment from './Payment'
 import Checkout from './Checkout'
+import ProductDetail from './ProductDetail'
 
 const AppRoutes = () => {
     return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
             <Route path='/user' element={<Signup />} />
             <Route path='/payment' element={<Payment />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path="/product/:productId" element={<ProductDetail/>} />
 
 
 

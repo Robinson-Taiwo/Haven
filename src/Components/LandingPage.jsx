@@ -91,23 +91,23 @@ const LandingPage = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "https://timbu-get-all-products.reavdev.workers.dev/", {
-          params: {
-            organization_id: "6543fa8ab7f743228e7902f501b5dca6",
-            reverse_sort: false,
-            page: currentPage,
-            size: 12,
-            Appid: "W1V4BL5K9FDWO97",
-            Apikey: "0ddf5c22ff2b4d988fabb85eb2bd456e20240712202624623806",
-            category_id: categoryId,
-          },
-        }
+          "https://timbu-get-all-products.reavdev.workers.dev/",
+          {
+            params: {
+              organization_id: "6543fa8ab7f743228e7902f501b5dca6",
+              reverse_sort: false,
+              page: currentPage,
+              size: 12,
+              Appid: "W1V4BL5K9FDWO97",
+              Apikey: "0ddf5c22ff2b4d988fabb85eb2bd456e20240712202624623806",
+              category_id: categoryId,
+            },
+          }
         );
 
         setProducts(response.data.items);
@@ -123,16 +123,12 @@ const LandingPage = () => {
     fetchProducts();
   }, [currentPage, categoryId]);
 
-
-
-  // https://timbu-get-all-products.reavdev.workers.dev/?organization_id=6543fa8ab7f743228e7902f501b5dca6&reverse_sort=false&page=1&size=12&Appid=W1V4BL5K9FDWO97&Apikey=0ddf5c22ff2b4d988fabb85eb2bd456e20240712202624623806&category_id=5f9d8f0d4c9e4a0004b0e8
-
-  const filteredProducts = products && products.length > 0
-    ? products.filter((product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    : [];
-
+  const filteredProducts =
+    products && products.length > 0
+      ? products.filter((product) =>
+          product.name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      : [];
 
   //   const filteredProducts = products.filter((product) =>
   //   product.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -142,13 +138,14 @@ const LandingPage = () => {
     if (data.length > 0) {
       const uniqueCategoriesMap = new Map();
 
-      products?.length > 0 && products.forEach((item) => {
-        item.categories.forEach((category) => {
-          if (!uniqueCategoriesMap.has(category.name)) {
-            uniqueCategoriesMap.set(category.name, category.id);
-          }
+      products?.length > 0 &&
+        products.forEach((item) => {
+          item.categories.forEach((category) => {
+            if (!uniqueCategoriesMap.has(category.name)) {
+              uniqueCategoriesMap.set(category.name, category.id);
+            }
+          });
         });
-      });
 
       const uniqueCategories = Array.from(
         uniqueCategoriesMap,
@@ -172,9 +169,9 @@ const LandingPage = () => {
 
   return (
     <>
-
-      {loading ? "loading website" : (
-
+      {loading ? (
+        "loading website"
+      ) : (
         <div className={` ${openCart ? "opc " : ""}`}>
           {/* this is the navbar container for navigation */}
           <nav className="navbar-container">
@@ -182,7 +179,9 @@ const LandingPage = () => {
               {navItems.map((item, index) => (
                 <h5 key={index}>
                   <button
-                    className={`navbar-link ${activeLink === item ? "active" : ""}`}
+                    className={`navbar-link ${
+                      activeLink === item ? "active" : ""
+                    }`}
                     onClick={() => handleClick(item)}
                   >
                     {item}
@@ -335,21 +334,21 @@ const LandingPage = () => {
               {products?.length > 0 ? (
                 <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
                   {products.map((product, index) => (
-                    <ProductCard
-                      openCart={openCart}
-                      setOpenCart={setOpenCart}
-                      key={index}
-                      image={product.photos[0]?.url}
-                      size={product.name}
-                      originalPrice={products[0].current_price[0]?.NGN[0]}
-                      oldPrice={product.oldPrice}
-                    />
+                      <ProductCard
+                        openCart={openCart}
+                        setOpenCart={setOpenCart}
+                        key={index}
+                        image={product.photos[0]?.url}
+                        size={product.name}
+                        originalPrice={products[0].current_price[0]?.NGN[0]}
+                        oldPrice={product.oldPrice}
+                        product={product}
+                      />
                   ))}
-                </div>) : (
+                </div>
+              ) : (
                 <div>loading product</div>
               )}
-
-
 
               <div className="load-more">
                 <Pagination
@@ -366,15 +365,7 @@ const LandingPage = () => {
             <Footer />
           </>
         </div>
-
       )}
-
-
-
-
-
-
-
     </>
   );
 };
