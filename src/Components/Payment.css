@@ -164,7 +164,7 @@ input:focus {
     border-top: none;
     background: transparent;
     border-bottom: none;
-    @apply h-[1.81rem] laptop:text-[1.5rem] laptop:w-[27.9rem] mb-[1rem] pb-[0rem] laptop:font-semibold laptop:pl-[0.1rem] overflow-y-hidden text-[1rem] w-[100%] font-medium
+    @apply h-[1.81rem] laptop:text-[1.5rem] laptop:w-[27.9rem] mb-[1rem] pb-[0rem] laptop:font-semibold laptop:pl-[0.1rem] overflow-y-hidden text-[1rem] w-[100%] font-medium 
 }
 
 
@@ -178,7 +178,7 @@ input:focus {
 }
 
 .master-card-input {
-    @apply flex flex-row desktop:gap-[4.5rem]  laptop:gap-[0rem] h-fit
+    @apply flex flex-row desktop:gap-[4.5rem] tablet:gap-[2rem] laptop:gap-[0rem] h-fit
 }
 
 .master-card-icon {
@@ -254,11 +254,10 @@ input:focus {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 45rem;
     /* width: 45rem;
     height: 32rem; */
     border-radius: 1.5625rem; 
-    @apply relative flex items-center justify-center flex-col laptop:w-[45rem] laptop:h-[32rem]  h-[14.437rem] w-[20rem]  tablet:h-[22.437rem] tablet:w-[28rem]
+    @apply relative flex items-center justify-center flex-col laptop:w-[45rem] laptop:h-[32rem]  h-[fit] w-[95%]  tablet:h-[22.437rem] tablet:w-[28rem]
 
   }
 

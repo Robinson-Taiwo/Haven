@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const calculateSubtotal = (item) => {
-  return item.price * item.quantity;
+  return item.current_price[0]?.NGN[0] * item.quantity;
 };
 
 const cartSlice = createSlice({
@@ -12,21 +12,24 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItemToCart: (state, action) => {
-      const { id, name,  photos, description, current_price } = action.payload;
+      const { id, name, photos, description, current_price } = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       if (existingItem) {
         existingItem.quantity++;
       } else {
-        state.items.push({ id, name,  photos, description, current_price, quantity: 1 });
+        state.items.push({ id, name, photos, description, current_price, quantity: 1 });
       }
-      state.total += current_price[0]?.NGN[0]; // Update total when adding an item
+      state.total += current_price[0]?.NGN[0];
     },
     decreaseItemQuantity: (state, action) => {
       const { id } = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
-      if (existingItem && existingItem.quantity > 1) {
+      if (existingItem) {
         existingItem.quantity--;
-        state.total -= existingItem.price; // Update total when decreasing quantity
+        if (existingItem.quantity < 1) {
+          state.items = state.items.filter((item) => item.id !== id);
+        }
+        state.total -= existingItem.current_price[0]?.NGN[0];
       }
     },
     increaseItemQuantity: (state, action) => {
@@ -34,10 +37,9 @@ const cartSlice = createSlice({
       const existingItem = state.items.find((item) => item.id === id);
       if (existingItem) {
         existingItem.quantity++;
-        state.total += existingItem.price; // Update total when increasing quantity
+        state.total += existingItem.current_price[0]?.NGN[0];
       }
     },
-
     removeItemFromCart: (state, action) => {
       const { id } = action.payload;
       const itemIndex = state.items.findIndex((item) => item.id === id);
@@ -50,7 +52,15 @@ const cartSlice = createSlice({
       state.items = [];
       state.total = 0;
     },
+
+    saveFormData: (state, action) => {
+      state.formData = action.payload; // Add this reducer
+    },
   },
+
+
+
+
 });
 
 export const {
@@ -58,7 +68,10 @@ export const {
   decreaseItemQuantity,
   increaseItemQuantity,
   clearCart,
+  saveFormData,
   removeItemFromCart,
 } = cartSlice.actions;
+
+
 
 export default cartSlice.reducer;

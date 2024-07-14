@@ -8,7 +8,7 @@
 }
 
 .out-container {
-  @apply flex laptop:flex-row gap-[1.38rem] flex-col bg-[white] tablet:w-[40rem] w-[23.4375rem] items-start laptop:w-[80%] desktop:w-[100%] laptop:justify-center bg-[transparent];
+  @apply flex laptop:flex-row gap-[1.38rem] flex-col bg-[white] tablet:w-[40rem] w-[23.4375rem] laptop:items-start laptop:w-[80%] desktop:w-[100%] laptop:justify-center bg-[transparent]  justify-center items-center ;
 }
 
 .delivery-container {
@@ -16,7 +16,7 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
 
   background: #fff;
-  @apply desktop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem] w-[100%] flex flex-col items-center laptop:w-[80%] tablet:w-[100%];
+  @apply desktop:w-[46.025rem] laptop:px-[1.5rem] laptop:pt-[1.94rem] w-[20rem] flex flex-col items-center laptop:w-[80%] tablet:w-[100%];
 }
 
 .d-first-frame {
@@ -56,7 +56,7 @@
   border-radius: 0.625rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   height: 2.5625rem;
-  @apply w-[100%] bg-transparent;
+  @apply w-[100%] bg-transparent text-[0.85rem] laptop:text-[1rem] px-[1rem] ;
 }
 
 .one-input-form input,
@@ -92,11 +92,11 @@ label {
 }
 
 .order-container {
-  height: 56.5rem;
+  /* height: 56.5rem; */
   border-radius: 0.3125rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #fff;
-  @apply desktop:w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem] laptop:w-[40rem] w-[95%] tablet:w-[100%];
+  @apply desktop:w-[32.4375rem] bg-[white] px-[1rem] pt-[2.06rem] laptop:w-[40rem] h-fit w-[21rem] tablet:w-[100%] pb-[2rem] ;
 }
 
 .oc-first-container {
@@ -133,8 +133,7 @@ label {
 }
 
 .rc-image {
-  height: 13.22231rem;
-  @apply laptop:w-[11.5625rem];
+  @apply laptop:w-[11.5625rem] tablet:w-[11rem] tablet:h-[12rem]  w-[7.25rem] h-[8.03rem]  laptop:w-[13.22231rem;] ;
 }
 
 .reciept-card-texts h1 {
@@ -156,8 +155,12 @@ label {
   line-height: normal;
 }
 
+.reciept-card-texts{
+  @apply w-[9.175rem] laptop:w-[14rem] tablet:w-[16rem]
+}
+
 .reciept-card {
-  @apply flex flex-row justify-between mt-[2.75rem] mb-[3.09rem];
+  @apply flex flex-row gap-[2.84rem] laptop:justify-between mt-[2.75rem] mb-[3.09rem] tablet:gap-[6rem] laptop:gap-[4.5rem] ; 
 }
 
 .rc-calc {
@@ -165,7 +168,7 @@ label {
 }
 
 .rcc-subtotal {
-  @apply flex flex-row gap-[10rem];
+  @apply flex flex-row laptop:gap-[10rem]  tablet:gap-[16rem] gap-[6.34rem] ;  
 }
 
 .rcc-subtotal h1 {
@@ -195,7 +198,7 @@ label {
 .checkout-footer {
   background: #d9dad6;
 
-  @apply pt-[8.44rem] pb-[2.75rem] w-[100%] flex flex-row items-center justify-evenly mt-[4rem];
+  @apply pt-[5.44rem] pb-[2.75rem] w-[100%] flex flex-row items-center justify-evenly mt-[4rem];
 }
 
 .checkout-footer p {

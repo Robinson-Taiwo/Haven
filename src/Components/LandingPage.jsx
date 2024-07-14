@@ -17,6 +17,7 @@ import Footer from "./Footer";
 import axios from "axios";
 import Cart from "./Cart";
 import Pagination from "./Pagination";
+import Loader from "./Loader";
 
 const LandingPage = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -126,8 +127,8 @@ const LandingPage = () => {
   const filteredProducts =
     products && products.length > 0
       ? products.filter((product) =>
-          product.name.toLowerCase().includes(searchQuery.toLowerCase())
-        )
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
       : [];
 
   //   const filteredProducts = products.filter((product) =>
@@ -170,7 +171,11 @@ const LandingPage = () => {
   return (
     <>
       {loading ? (
-        "loading website"
+        (
+
+          <Loader />
+
+        )
       ) : (
         <div className={` ${openCart ? "opc " : ""}`}>
           {/* this is the navbar container for navigation */}
@@ -179,9 +184,8 @@ const LandingPage = () => {
               {navItems.map((item, index) => (
                 <h5 key={index}>
                   <button
-                    className={`navbar-link ${
-                      activeLink === item ? "active" : ""
-                    }`}
+                    className={`navbar-link ${activeLink === item ? "active" : ""
+                      }`}
                     onClick={() => handleClick(item)}
                   >
                     {item}
@@ -334,20 +338,20 @@ const LandingPage = () => {
               {products?.length > 0 ? (
                 <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
                   {products.map((product, index) => (
-                      <ProductCard
-                        openCart={openCart}
-                        setOpenCart={setOpenCart}
-                        key={index}
-                        image={product.photos[0]?.url}
-                        size={product.name}
-                        originalPrice={products[0].current_price[0]?.NGN[0]}
-                        oldPrice={product.oldPrice}
-                        product={product}
-                      />
+                    <ProductCard
+                      openCart={openCart}
+                      setOpenCart={setOpenCart}
+                      key={index}
+                      image={product.photos[0]?.url}
+                      size={product.name}
+                      originalPrice={products[0].current_price[0]?.NGN[0]}
+                      oldPrice={product.oldPrice}
+                      product={product}
+                    />
                   ))}
                 </div>
               ) : (
-                <div>loading product</div>
+                <div className=" animate-bounce text-[#434834] text-[1.5rem] font-bold  " >    loading products...</div>
               )}
 
               <div className="load-more">

@@ -6,24 +6,33 @@ import cancle from "../assets/icons/close.svg";
 import success from "../assets/icons/Success.svg";
 
 import "./Payment.css";
+import { useDispatch, useSelector } from "react-redux";
 
 const Payment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent scrolling
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = "auto"; // Allow scrolling
+    document.body.style.overflow = "auto";
   };
+
+
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartTotal = useSelector((state) => state.cart.total);
 
   return (
     <>
       <section className="checkout-page">
-        <Link to="/">
+        <Link to="/checkout">
           <img src={back} alt="" className="checkout-back" />
         </Link>
 
@@ -32,32 +41,37 @@ const Payment = () => {
             <div className="payment-container laptop:mb-[0rem] mb-[2rem]">
               <h1 className="Payment-text">Payment</h1>
 
-              <div className="payment-details-texts mb-[4rem]">
-                <h4 className=" flex items-center justify-center laptop:pt-[1rem]">
-                  Item
-                </h4>
+              {cartItems.map((item) => (
+                <div className="mb-[2rem]" >
 
-                <h3 className="mmkm">Kingsize Bedding and Platform</h3>
-              </div>
+                  <div key={item.id} className="payment-details-texts mb-[4rem]">
+                    <h4 className=" flex items-center justify-center laptop:pt-[1rem]">
+                      Item
+                    </h4>
+                    <h3 className="mmkm">{item.name}</h3>
+                  </div>
 
-              <div className="payment-details-texts">
-                <h4 className=" ">Amount:</h4>
+                  <div className="payment-details-texts">
+                    <h4 className=" ">Amount:</h4>
+                    <h3 className="">NGN {item.current_price[0]?.NGN[0]}</h3>
+                  </div>
 
-                <h3 className="">NGN 1,000,000</h3>
-              </div>
+
+                </div>
+
+              ))}
+
 
               <div className="deets-line w-[100%] laptop:w-[36.4rem] mt-[3rem] mb-[3.37rem]"></div>
-
-              {/* horizontal line */}
-              {/* <div className="hr-line"></div> */}
 
               <div className="item-containerr">
                 <p className="amount-to-pay">Amount to pay</p>
 
                 <p className="kingsize-text laptop:text-[1.5rem] font-semibold pr-[1.2rem] ">
-                  NGN 1,000,000
+                  NGN {cartTotal}
                 </p>
               </div>
+
 
               <div className="remember-card py-[0.5rem]">
                 <label className="custom-checkbox">
@@ -88,7 +102,7 @@ const Payment = () => {
                     <input
                       type="text"
                       maxLength={16}
-                      className="card-input-line  w-[16.2rem] "
+                      className="card-input-line tablet:w-[23rem]  w-[16.2rem] "
                     />
 
                     <img

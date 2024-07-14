@@ -16,7 +16,8 @@
 }
 
 .cart-content-container {
-  @apply bg-[#FAF5FF] h-[100%] w-[92.255%] desktop:w-[78rem] laptop:w-[80%];
+  transition: 6s ease-in;
+  @apply bg-[#FAF5FF] right-[0]  relative  h-[100%] w-[92.255%] desktop:w-[78rem] laptop:w-[80%];
 }
 
 .cart-content-nav {
