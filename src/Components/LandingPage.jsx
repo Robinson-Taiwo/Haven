@@ -334,6 +334,7 @@ const LandingPage = () => {
               </div>
             </div>
 
+
             <div className="product-section ">
               {products?.length > 0 ? (
                 <div className="product-section-container  tablet:gap-x-[3rem] laptop:gap-x-[1.62rem]  ">
