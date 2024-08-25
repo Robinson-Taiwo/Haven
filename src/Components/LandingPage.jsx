@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import mastercard from "../assets/icons/mastercard.svg";
 import search from "../assets/icons/searchIcon.svg";
 import user from "../assets/icons/user.svg";
 import cart from "../assets/icons/cart.svg";
@@ -97,7 +96,7 @@ const LandingPage = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "https://timbu-get-all-products.reavdev.workers.dev/",
+          "https://api.timbu.cloud/products",
           {
             params: {
               organization_id: "6543fa8ab7f743228e7902f501b5dca6",
@@ -110,7 +109,7 @@ const LandingPage = () => {
             },
           }
         );
-
+        console.log(response)
         setProducts(response.data.items);
         setTotalPages(Math.ceil(response.data.total / postsPerPage));
         setTotalPost(response.data.total);
