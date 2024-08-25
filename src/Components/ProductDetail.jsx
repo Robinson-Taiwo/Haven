@@ -19,7 +19,7 @@ const ProductDetail = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://timbu-get-single-product.reavdev.workers.dev/${productId}`,
+          `https://api.timbu.cloud/products/${productId}`,
           {
             params: {
               organization_id: "6543fa8ab7f743228e7902f501b5dca6",
@@ -49,7 +49,7 @@ const ProductDetail = () => {
   }, [emblaApi]);
 
   if (loading) return <Loader />;
-  if (error) return <div>Error: {error}</div>;
+  if (error) return <div    >Error: {error}</div>;
 
   return (
     <div className="product-detail-container">
@@ -68,7 +68,7 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      <div className="product-info">
+      <div  className="product-info">
         <h1>{product.name}</h1>
 
         <h6 className="text-[grey] text-[0.7rem] tablet:text-[0.95rem]  mb-[1rem]  ">
